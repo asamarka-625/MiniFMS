@@ -1,0 +1,184 @@
+<div class="form-container">
+    <div class="form-title">
+        ОБОРОТНАЯ СТОРОНА ПЕРВОГО ЛИСТА
+    </div>
+
+    <div class="section-title">Адрес прежнего места пребывания в Российской Федерации</div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">(в случае прибытия в новое место пребывания в период последнего въезда в Российскую Федерацию)</span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Субъект Российской Федерации, муниципальное образование (федеральная территория)</span>
+        <div class="checkbox-grid" id="prev-region"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Городское и сельское поселение (при наличии), внутригородской район (при наличии), межселенная территория (при наличии)</span>
+        <div class="checkbox-grid" id="prev-city"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Населенный пункт (при наличии), элемент планировочной структуры (при наличии)</span>
+        <div class="checkbox-grid" id="prev-area"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Элемент улично-дорожной сети (при наличии)</span>
+        <div class="checkbox-grid" id="prev-road"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Здание, строение, сооружение</span>
+        <div style="display: flex; gap: 1rem;">
+            <input id="prev-building-1">
+            <input id="prev-building-2">
+            <input id="prev-building-3">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Помещение (при наличии), помещение в пределах квартиры (при наличии)</span>
+        <div style="display: flex; gap: 1rem; margin-left: 10px;">
+            <input id="prev-room-1">
+            <input id="prev-room-2">
+        </div>
+    </div>
+
+    <div class="section-title">2. СВЕДЕНИЯ О МЕСТЕ ПРЕБЫВАНИЯ</div>
+
+    <div class="form-row">
+        <span class="form-label">Субъект Российской Федерации, муниципальное образование (федеральная территория)</span>
+        <div class="checkbox-grid" id="current-region"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Городское и сельское поселение (при наличии), внутригородской район (при наличии), межселенная территория (при наличии)</span>
+        <div class="checkbox-grid" id="current-city"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Населенный пункт (при наличии), элемент планировочной структуры (при наличии)</span>
+        <div class="checkbox-grid" id="current-area"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Элемент улично-дорожной сети (при наличии)</span>
+        <div class="checkbox-grid" id="current-road"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Здание, строение, сооружение</span>
+        <div style="display: flex; gap: 1rem;">
+            <input id="current-building-1">
+            <input id="current-building-2">
+            <input id="current-building-3">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Помещение (при наличии), помещение в пределах квартиры (при наличии)</span>
+        <div style="display: flex; gap: 1rem; margin-left: 10px;">
+            <input id="current-room-1">
+            <input id="current-room-2">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Место пребывания</span>
+
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>жилое помещение</span>
+            <span class="checkbox option" id="room-living" data-field="place-type" data-value="living"></span>
+        </span>
+
+        <span class="checkbox-option" style="margin-left: 15px;">
+            <span>иное помещение</span>
+            <span class="checkbox option" id="room-other" data-field="place-type" data-value="other"></span>
+        </span>
+
+        <span class="checkbox-option" style="margin-left: 15px;">
+            <span>организация</span>
+            <span class="checkbox option" id="room-organization" data-field="place-type" data-value="organization"></span>
+        </span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Наименование и реквизиты</span>
+        <div class="checkbox-grid" id="permission-doc-line-1"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">документа,</span>
+        <div class="checkbox-grid" id="permission-doc-line-2"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">подтверждающего</span>
+        <div class="checkbox-grid" id="permission-doc-line-3"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">право пользования помещением (строением,</span>
+        <div class="checkbox-grid" id="permission-doc-line-4"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">сооружением) (указывается</span>
+        <div class="checkbox-grid" id="permission-doc-line-5"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Кадастровый номер земельного или лесного участка (при наличии)</span>
+        <div class="checkbox-grid" id="permission-doc-line-6"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">
+            (в случае фактического проживания иностранного гражданина в помещении, не имеющем адресных данных (в том числе временном),
+            использующемся организацией (индивидуальным предпринимателем), оказывающей гостиничные услуги)
+        </span>
+    </div>
+
+    <div class="section-title">Фактическое место нахождения</div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">
+            (в случае, предусмотренном частью 2 статьи 21 Федерального закона "О миграционном учете иностранных граждан и лиц без гражданства в Российской Федерации")
+        </span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Субъект Российской Федерации, муниципальное образование (федеральная территория)</span>
+        <div class="checkbox-grid" id="actual-region"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Городское и сельское поселение (при наличии), внутригородской район (при наличии), межселенная территория (при наличии)</span>
+        <div class="checkbox-grid" id="actual-city"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Населенный пункт (при наличии), элемент планировочной структуры (при наличии)</span>
+        <div class="checkbox-grid" id="actual-area"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Кадастровый номер земельного или лесного участка (при наличии)</span>
+        <div class="checkbox-grid" id="actual-cadastral"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Поставлен на учет до:</span>
+        <div class="checkbox-grid" id="live-day"></div>
+        <span class="form-label" style="margin-left: 10px;">число</span>
+        <div class="checkbox-grid" id="live-month"></div>
+        <span class="form-label" style="margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="live-year"></div>
+        <span class="form-label" style="margin-left: 10px;">год</span>
+    </div>
+</div>

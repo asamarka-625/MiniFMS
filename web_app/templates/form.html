@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+<body>
+    <div class="instructions">
+        <h3>Инструкция по заполнению формы</h3>
+        <p>1. Нажмите на любую ячейку для ее активации (подсветится синим).</p>
+        <p>2. Используйте клавиатуру для ввода символов в активную ячейку.</p>
+        <p>3. Для перехода к следующей ячейке используйте клавишу <strong>Tab</strong> или <strong>стрелку вправо</strong>.</p>
+        <p>4. Для перехода к предыдущей ячейке используйте <strong>Shift+Tab</strong> или <strong>стрелку влево</strong>.</p>
+        <p>5. Для удаления символа и перехода к предыдущей ячейке используйте <strong>Backspace</strong>.</p>
+        <p>6. Для выбора вариантов в полях "Пол", "Цель въезда" и других - просто нажмите на соответствующий квадрат.</p>
+        <p>7. Для очистки всей формы нажмите кнопку "Очистить форму".</p>
+
+        <div class="key-instructions">
+            <strong>Управление с клавиатуры:</strong><br>
+            • <strong>Tab / →</strong> - следующая ячейка<br>
+            • <strong>Shift+Tab / ←</strong> - предыдущая ячейка<br>
+            • <strong>Backspace</strong> - удалить символ и перейти к предыдущей ячейке<br>
+            • <strong>Delete</strong> - удалить символ в текущей ячейке<br>
+            • <strong>Пробел</strong> - ввести пробел<br>
+            • <strong>Enter</strong> - перейти к следующей строке
+        </div>
+    </div>
+    {% include 'form-1.html' %}
+    {% include 'form-2.html' %}
+    {% include 'form-3.html' %}
+    <div class="form-controls">
+        <button class="btn btn-clear" id="clear-form">Очистить форму</button>
+        <button class="btn btn-create" id="create-form">Создать файл</button>
+        <button class="btn" id="focus-first">Перейти к первой ячейке</button>
+    </div>
+    <div class="current-cell-info" id="current-cell-info">
+        <strong>Активная ячейка:</strong><br>
+        <span id="current-field-name">Не выбрана</span><br>
+        <span id="current-cell-index">-</span><br>
+        <span id="current-cell-value">Значение: -</span>
+    </div>
+    <script src="/static/js/form.js"></script>
+</body>
+</html>

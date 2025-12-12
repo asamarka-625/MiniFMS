@@ -1,0 +1,327 @@
+<div class="form-container">
+    <div class="form-title">
+        УВЕДОМЛЕНИЕ О ПРИБЫТИИ ИНОСТРАННОГО ГРАЖДАНИНА<br>
+        ИЛИ ЛИЦА БЕЗ ГРАЖДАНСТВА В МЕСТО ПРЕБЫВАНИЯ
+    </div>
+
+    <div class="form-title">
+        1. СВЕДЕНИЯ О ЛИЦЕ, ПОДЛЕЖАЩЕМ ПОСТАНОВКЕ НА УЧЕТ ПО МЕСТУ ПРЕБЫВАНИЯ
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Фамилия</span>
+        <div class="checkbox-grid" id="surname-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Фамилия (латинскими буквами)</span>
+        <div class="checkbox-grid" id="surname-latin-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Имя</span>
+        <div class="checkbox-grid" id="name-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Имя (латинскими буквами)</span>
+        <div class="checkbox-grid" id="name-latin-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Отчество (при наличии)</span>
+        <div class="checkbox-grid" id="patronymic-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Отчество (латинскими буквами)</span>
+        <div class="checkbox-grid" id="patronymic-latin-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Гражданство, подданство</span>
+        <div class="checkbox-grid" id="citizenship-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Дата рождения: число</span>
+        <div class="checkbox-grid" id="birth-day"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="birth-month"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">год</span>
+        <div class="checkbox-grid" id="birth-year"></div>
+        <span class="form-label" id="gender-male" style="min-width: 100px; margin-left: 20px;">Пол: мужской</span>
+        <span class="checkbox radio" data-field="gender" data-value="male"></span>
+        <span class="form-label" id="gender-female" style="min-width: 80px; margin-left: 5px;">женский</span>
+        <span class="checkbox radio" data-field="gender" data-value="female"></span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Место рождения:</span>
+        <div class="checkbox-grid" id="birth-place"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Государство</span>
+        <div class="checkbox-grid" id="birth-state"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Город или другой населенный пункт</span>
+        <div class="checkbox-grid" id="birth-city"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <div class="checkbox-grid" id="birth-place-line-2"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">Документ, удостоверяющий личность:</span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">вид</span>
+        <div class="checkbox-grid" id="document-type"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">серия</span>
+        <div class="checkbox-grid" id="document-series"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">№</span>
+        <div class="checkbox-grid" id="document-number"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">Дата выдачи:</span>
+        <span class="small-text" style="margin-left: 200px;">Срок действия до:</span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">число</span>
+        <div class="checkbox-grid" id="issue-day"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="issue-month"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">год</span>
+        <div class="checkbox-grid" id="issue-year"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 20px;">число</span>
+        <div class="checkbox-grid" id="expiry-day"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="expiry-month"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">год</span>
+        <div class="checkbox-grid" id="expiry-year"></div>
+    </div>
+
+    <div class="note-text">(в случае ограниченного срока действия документа)</div>
+
+    <div class="form-row">
+        <span class="form-label">запись акта о рождении:</span>
+    </div>
+
+    <div class="form-row" style="font-size: 11px; margin-left: 10px;">
+        <span>(для постановки на учет по месту пребывания несовершеннолетних иностранных граждан, не достигших 14-летнего возраста, размещаются на</span>
+    </div>
+
+    <div class="form-row" style="font-size: 11px; margin-left: 10px;">
+        <span>территории Российской Федерации, не имеющих документа, удостоверяющего личность, выданного иностранным государством (для лиц без гражданства)</span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Номер записи акта о рождении</span>
+        <div class="checkbox-grid" id="birth-act-number"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Дата записи акта о рождении</span>
+        <div class="checkbox-grid" id="birth-act-date"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Наименование уполномоченного органа Российско Федерации</span>
+        <div class="checkbox-grid" id="birth-act-body-line-1"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">которым произведена государственная регистрация рождения</span>
+        <div class="checkbox-grid" id="birth-act-body-line-2"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <div class="checkbox-grid" id="birth-act-body-line-3"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">Вид и реквизиты документа, подтверждающего право на пребывание (проживание) в Российской Федерации:</span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label" style="margin-left: 10px;">Вид:</span>
+        <span class="checkbox-option">
+            <span>виза</span>
+            <span class="checkbox option" id="resident-visa" data-field="purpose" data-value="resident-visa"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>вид на жительство</span>
+            <span class="checkbox option" id="resident-card" data-field="purpose" data-value="resident-card"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>разрешение на временное проживание</span>
+            <span class="checkbox option" id="resident-permit" data-field="purpose" data-value="resident-permit"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>разрешение на временное проживание в целях получения образования</span>
+            <span class="checkbox option" id="resident-permit-educational" data-field="purpose" data-value="resident-permit-educational"></span>
+        </span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">серия</span>
+        <div class="checkbox-grid" id="document-right-series"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">№</span>
+        <div class="checkbox-grid" id="document-right-number"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">Дата выдачи:</span>
+        <span class="small-text" style="margin-left: 200px;">Срок действия до:</span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">число</span>
+        <div class="checkbox-grid" id="right-issue-day"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="right-issue-month"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">год</span>
+        <div class="checkbox-grid" id="right-issue-year"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 20px;">число</span>
+        <div class="checkbox-grid" id="right-expiry-day"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="right-expiry-month"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">год</span>
+        <div class="checkbox-grid" id="right-expiry-year"></div>
+    </div>
+
+    <div class="note-text">(в случае ограниченного срока действия документа)</div>
+
+    <div class="form-row">
+        <span class="form-label">Цель въезда:</span>
+        <span class="checkbox-option">
+            <span>служебная</span>
+            <span class="checkbox option" id="target-official" data-field="purpose" data-value="official"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>туризм</span>
+            <span class="checkbox option" id="target-tourism" data-field="purpose" data-value="tourism"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>деловая</span>
+            <span class="checkbox option" id="target-business" data-field="purpose" data-value="business"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>учеба</span>
+            <span class="checkbox option" id="target-study" data-field="purpose" data-value="study"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>работа</span>
+            <span class="checkbox option" id="target-work" data-field="purpose" data-value="work"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>частная</span>
+            <span class="checkbox option" id="target-private" data-field="purpose" data-value="private"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>транзит</span>
+            <span class="checkbox option" id="target-transit" data-field="purpose" data-value="transit"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>гуманитарная</span>
+            <span class="checkbox option" id="target-humanitarian" data-field="purpose" data-value="humanitarian"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>иная</span>
+            <span class="checkbox option" id="target-other" data-field="purpose" data-value="other"></span>
+        </span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="checkbox-option">
+            <span>гуманитарная</span>
+            <span class="checkbox option" data-field="purpose" data-value="humanitarian"></span>
+        </span>
+        <span class="checkbox-option" style="margin-left: 10px;">
+            <span>иная</span>
+            <span class="checkbox option" data-field="purpose" data-value="other"></span>
+        </span>
+        <span class="form-label" style="min-width: 140px; margin-left: 10px;">Телефон (при наличии)</span>
+        <span class="small-text">+7</span>
+        <div class="checkbox-grid" id="phone-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Профессия</span>
+        <div class="checkbox-grid" id="profession-field"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <span class="small-text">Дата въезда:</span>
+        <span class="small-text" style="margin-left: 200px;">Срок пребывания до:</span>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">число</span>
+        <div class="checkbox-grid" id="entry-day"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="entry-month"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">год</span>
+        <div class="checkbox-grid" id="entry-year"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 20px;">число</span>
+        <div class="checkbox-grid" id="stay-until-day"></div>
+        <span class="form-label" style="min-width: 60px; margin-left: 10px;">месяц</span>
+        <div class="checkbox-grid" id="stay-until-month"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">год</span>
+        <div class="checkbox-grid" id="stay-until-year"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Миграционная карта серия</span>
+        <div class="checkbox-grid" id="migration-card-series"></div>
+        <span class="form-label" style="min-width: 40px; margin-left: 10px;">№</span>
+        <div class="checkbox-grid" id="migration-card-number"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">Сведения о</span>
+        <div class="checkbox-grid" id="representative-line-1"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">законных</span>
+        <div class="checkbox-grid" id="representative-line-2"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label">представителях</span>
+        <div class="checkbox-grid" id="representative-line-3"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <div class="checkbox-grid" id="representative-line-4"></div>
+    </div>
+
+    <div class="form-row">
+        <span class="form-label"></span>
+        <div class="checkbox-grid" id="representative-line-5"></div>
+    </div>
+
+    <div class="footer-note">
+        (фамилия, имя, отчество (при наличии), дата рождения)
+    </div>
+</div>
