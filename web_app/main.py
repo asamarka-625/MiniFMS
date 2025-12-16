@@ -4,26 +4,29 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 # Внутренние модули
-from web_app.src.core import config
+from web_app.src.core import cfg, mongodb
 from web_app.src.routers import router
 from web_app.src.utils import get_valid_cells
 
 
 async def startup():
-    config.logger.info("Инициализируем валидные ячейки из шаблона")
+    cfg.logger.info("Инициализируем mongodb")
+    await mongodb.connect()
+
+    cfg.logger.info("Инициализируем валидные ячейки из шаблона")
     get_valid_cells()
 
 
 async def shutdown():
-    config.logger.info("Останавливаем приложение...")
+    cfg.logger.info("Закрываем соединение с mongodb")
+    await mongodb.close()
+    cfg.logger.info("Останавливаем приложение...")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup логика
     await startup()
     yield
-    # Shutdown логика
     await shutdown()
 
 

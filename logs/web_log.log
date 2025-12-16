@@ -1,0 +1,345 @@
+2025-12-16 10:19:05,930 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:06,724 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:07,669 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:08,779 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:10,325 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:12,669 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:16,567 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:23,808 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:19:37,318 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:20:03,639 - web_app.src.core.logger - CRITICAL - MONGODB_URL is required in environment variables
+2025-12-16 10:21:42,541 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 10:21:43,422 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 10:21:44,408 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 10:21:45,585 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 10:21:47,206 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 10:21:49,656 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 10:21:53,693 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 10:22:00,942 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:41:05,955 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:41:07,013 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:41:08,075 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:41:09,443 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:41:11,219 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:41:13,736 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:46:29,582 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:46:29,778 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 11:49:19,536 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 11:49:19,736 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:00:58,764 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:00:58,960 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:03:45,423 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:03:45,643 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:05:34,936 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:05:35,195 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:07:34,004 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:07:34,200 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:24:56,703 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:24:56,977 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:24:56,986 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:24:58,355 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:24:58,544 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:24:58,553 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:25:00,044 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:25:00,235 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:25:00,245 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:25:01,997 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:25:02,183 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:25:02,192 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:25:04,337 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:25:04,524 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:25:04,533 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:26:48,747 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:26:48,971 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:26:48,979 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:26:50,388 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:26:50,578 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:26:50,586 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:26:52,068 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:26:52,253 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:26:52,262 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:26:53,956 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:26:54,148 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:26:54,157 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:26:56,291 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:26:56,480 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:26:56,489 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:26:59,361 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:26:59,544 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:26:59,553 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:33:34,975 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:33:35,058 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:33:35,066 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:33:36,522 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:33:36,592 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:33:36,601 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:33:38,198 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:33:38,266 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:33:38,275 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:33:40,052 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:33:40,124 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:33:40,132 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:33:42,388 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:33:42,465 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:33:42,474 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:33:45,546 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:33:45,619 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:33:45,628 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:33:50,215 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:33:50,283 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:33:50,292 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-12-16 12:37:46,902 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:37:46,983 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:37:47,000 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:37:47,001 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:37:47,001 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:37:47,018 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:37:48,460 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:37:48,531 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:37:48,548 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:37:48,548 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:37:48,548 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:37:48,549 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:37:50,117 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:37:50,189 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:37:50,207 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:37:50,207 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:37:50,207 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:37:50,209 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:37:51,988 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:37:52,057 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:37:52,075 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:37:52,075 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:37:52,075 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:37:52,077 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:37:54,268 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:37:54,341 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:37:54,358 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:37:54,358 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:37:54,358 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:37:54,359 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:37:57,334 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:37:57,406 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:37:57,423 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:37:57,424 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:37:57,424 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:37:57,425 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:38:02,007 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:38:02,076 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:38:02,094 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:38:02,094 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:38:02,094 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:38:02,096 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:44:49,168 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:44:49,252 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:44:49,270 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:44:49,270 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:44:49,270 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:44:49,287 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:44:50,782 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:44:50,856 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:44:50,873 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:44:50,873 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:44:50,873 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:44:50,875 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:44:52,477 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:44:52,552 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:44:52,569 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:44:52,569 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:44:52,570 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:44:52,571 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:44:54,416 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:44:54,495 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:44:54,515 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:44:54,515 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:44:54,515 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:44:54,517 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:44:56,847 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:44:56,925 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:44:56,944 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:44:56,944 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:44:56,945 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:44:56,947 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:45:00,057 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:45:00,135 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:45:00,153 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:45:00,153 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:45:00,154 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:45:00,155 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:45:04,793 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:45:04,868 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:45:04,886 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:45:04,886 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:45:04,886 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:45:04,888 - web_app.src.core.logger - ERROR - Failed to connect to MongoDB: The field 'unique' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }, full error: {'ok': 0.0, 'errmsg': 'The field \'unique\' is not valid for an _id index specification. Specification: { unique: true, name: "user_id_unique", key: { _id: 1 }, v: 2 }', 'code': 197, 'codeName': 'InvalidIndexSpecificationOption'}
+2025-12-16 12:45:48,353 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:45:48,435 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:45:48,452 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:45:48,452 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:45:48,452 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:45:48,453 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:45:48,460 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:45:48,460 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:45:48,460 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:45:49,990 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:45:50,065 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:45:50,082 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:45:50,082 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:45:50,082 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:45:50,083 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:45:50,083 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:45:50,084 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:45:50,084 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:45:51,688 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:45:51,759 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:45:51,777 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:45:51,777 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:45:51,777 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:45:51,778 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:45:51,778 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:45:51,779 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:45:51,779 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:45:53,592 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:45:53,664 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:45:53,681 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:45:53,681 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:45:53,681 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:45:53,682 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:45:53,683 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:45:53,683 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:45:53,683 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:50:18,484 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:50:18,566 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:50:18,583 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:50:18,584 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:50:18,584 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:50:18,584 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:50:18,585 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:50:18,585 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:50:18,585 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:50:20,096 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:50:20,170 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:50:20,188 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:50:20,188 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:50:20,188 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:50:20,189 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:50:20,190 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:50:20,190 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:50:20,190 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:50:21,751 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:50:21,825 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:50:21,842 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:50:21,842 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:50:21,842 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:50:21,843 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:50:21,843 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:50:21,843 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:50:21,844 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:50:23,659 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:50:23,729 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:50:23,747 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:50:23,747 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:50:23,747 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:50:23,748 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:50:23,748 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:50:23,748 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:50:23,748 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:57:55,806 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:57:56,031 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:57:56,048 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:57:56,048 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:57:56,049 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:57:56,049 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:57:56,050 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:57:56,050 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:57:56,050 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 12:58:11,535 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 12:58:11,767 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 12:58:11,785 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 12:58:11,785 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 12:58:11,785 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 12:58:11,786 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 12:58:11,786 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 12:58:11,786 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 12:58:11,786 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:11:51,969 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:11:52,195 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:11:52,213 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:11:52,213 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:11:52,214 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:11:52,214 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:11:52,215 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:11:52,215 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:11:52,215 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:19:21,609 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:19:21,835 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:19:21,852 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:19:21,852 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:19:21,852 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:19:21,871 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:19:21,884 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:19:21,885 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:19:21,886 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:21:00,007 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:21:00,244 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:21:00,261 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:21:00,262 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:21:00,262 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:21:00,262 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:21:00,263 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:21:00,263 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:21:00,263 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:22:29,520 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:22:29,746 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:22:29,764 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:22:29,764 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:22:29,764 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:22:29,765 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:22:29,766 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:22:29,766 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:22:29,766 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:28:54,427 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:28:54,651 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:28:54,668 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:28:54,668 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:28:54,668 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:28:54,685 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:28:54,701 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:28:54,701 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:28:54,701 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:32:04,677 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:32:04,915 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:32:04,932 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:32:04,932 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:32:04,932 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:32:04,933 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:32:04,934 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:32:04,934 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:32:04,934 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:36:34,050 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:36:34,336 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:36:34,354 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:36:34,354 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:36:34,354 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:36:34,355 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:36:34,356 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:36:34,356 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:36:34,356 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:38:01,689 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:38:01,920 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:38:01,938 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:38:01,938 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:38:01,938 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:38:01,939 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:38:01,939 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:38:01,939 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:38:01,939 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-16 13:42:51,718 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-16 13:42:51,968 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-16 13:42:51,986 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-16 13:42:51,986 - web_app.src.core.logger - INFO - Database: fms
+2025-12-16 13:42:51,986 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-16 13:42:51,987 - web_app.src.core.logger - INFO - User indexes created
+2025-12-16 13:42:51,987 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-16 13:42:51,987 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-16 13:42:51,988 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона

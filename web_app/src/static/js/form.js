@@ -18,8 +18,8 @@ const fieldConfigurations = [
     { id: 'birth-month', cellCount: 2, label: 'Месяц рождения' },
     { id: 'birth-year', cellCount: 4, label: 'Год рождения' },
     { id: 'birth-place', cellCount: 25, label: 'Место рождения' },
-    { id: 'birth-state', cellCount: 21, label: 'Место рождения (государство)' },
-    { id: 'birth-city', cellCount: 21, label: 'Место рождения (город)' },
+    { id: 'birth-state', cellCount: 31, label: 'Место рождения (государство)' },
+    { id: 'birth-city', cellCount: 31, label: 'Место рождения (город)' },
     { id: 'document-type', cellCount: 29, label: 'Тип документа' },
     { id: 'document-series', cellCount: 6, label: 'Серия документа' },
     { id: 'document-number', cellCount: 21, label: 'Номер документа' },
@@ -80,7 +80,7 @@ const fieldConfigurations = [
     { id: 'live-year', cellCount: 4, label: 'Поставлен на учет до — год' },
     { id: 'host-surname', cellCount: 28, label: 'Фамилия' },
     { id: 'host-name', cellCount: 28, label: 'Имя' },
-    { id: 'host-patronymic', cellCount: 28, label: 'Отчество (при наличии)' },
+    { id: 'host-patronymic', cellCount: 23, label: 'Отчество (при наличии)' },
     { id: 'host-document-type', cellCount: 10, label: 'Тип документа' },
     { id: 'host-document-series', cellCount: 4, label: 'Серия документа' },
     { id: 'host-document-number', cellCount: 12, label: 'Номер документа' },
@@ -458,26 +458,26 @@ async function SubmitForm(e) {
         data[name_field] = value_field;
     });
 
-    data["gender_male"] = document.getElementById("gender-male").textContent ? true : false;
-    data["gender_female"] = document.getElementById("gender-female").textContent ? true : false;
-    data["resident_visa"] = document.getElementById("resident-visa").textContent ? true : false;
-    data["resident_card"] = document.getElementById("resident-card").textContent ? true : false;
-    data["resident_permit"] = document.getElementById("resident-permit").textContent ? true : false;
-    data["resident_permit_educational"] = document.getElementById("resident-permit-educational").textContent ? true : false;
-    data["target_official"] = document.getElementById("target-official").textContent ? true : false;
-    data["target_tourism"] = document.getElementById("target-tourism").textContent ? true : false;
-    data["target_business"] = document.getElementById("target-business").textContent ? true : false;
-    data["target_study"] = document.getElementById("target-study").textContent ? true : false;
-    data["target_work"] = document.getElementById("target-work").textContent ? true : false;
-    data["target_private"] = document.getElementById("target-private").textContent ? true : false;
-    data["target_transit"] = document.getElementById("target-transit").textContent ? true : false;
-    data["target_humanitarian"] = document.getElementById("target-humanitarian").textContent ? true : false;
-    data["target_other"] = document.getElementById("target-other").textContent ? true : false;
-    data["room_living"] = document.getElementById("room-living").textContent ? true : false;
-    data["room_other"] = document.getElementById("room-other").textContent ? true : false;
-    data["room_organization"] = document.getElementById("room-organization").textContent ? true : false;
-    data["person_organization"] = document.getElementById("person-organization").textContent ? true : false;
-    data["person_individual"] = document.getElementById("person-individual").textContent ? true : false;
+    data["gender_male"] = document.getElementById("gender-male").classList.contains('active') ? true : false;
+    data["gender_female"] = document.getElementById("gender-female").classList.contains('active') ? true : false;
+    data["resident_visa"] = document.getElementById("resident-visa").classList.contains('active') ? true : false;
+    data["resident_card"] = document.getElementById("resident-card").classList.contains('active') ? true : false;
+    data["resident_permit"] = document.getElementById("resident-permit").classList.contains('active') ? true : false;
+    data["resident_permit_educational"] = document.getElementById("resident-permit-educational").classList.contains('active') ? true : false;
+    data["target_official"] = document.getElementById("target-official").classList.contains('active') ? true : false;
+    data["target_tourism"] = document.getElementById("target-tourism").classList.contains('active') ? true : false;
+    data["target_business"] = document.getElementById("target-business").classList.contains('active') ? true : false;
+    data["target_study"] = document.getElementById("target-study").classList.contains('active') ? true : false;
+    data["target_work"] = document.getElementById("target-work").classList.contains('active') ? true : false;
+    data["target_private"] = document.getElementById("target-private").classList.contains('active') ? true : false;
+    data["target_transit"] = document.getElementById("target-transit").classList.contains('active') ? true : false;
+    data["target_humanitarian"] = document.getElementById("target-humanitarian").classList.contains('active') ? true : false;
+    data["target_other"] = document.getElementById("target-other").classList.contains('active') ? true : false;
+    data["room_living"] = document.getElementById("room-living").classList.contains('active') ? true : false;
+    data["room_other"] = document.getElementById("room-other").classList.contains('active') ? true : false;
+    data["room_organization"] = document.getElementById("room-organization").classList.contains('active') ? true : false;
+    data["person_organization"] = document.getElementById("person-organization").classList.contains('active') ? true : false;
+    data["person_individual"] = document.getElementById("person-individual").classList.contains('active') ? true : false;
 
     const response = await fetch(`${API_BASE_URL}/create`, {
         method: "POST",

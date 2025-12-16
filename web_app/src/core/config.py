@@ -13,24 +13,32 @@ load_dotenv()
 
 @dataclass
 class Config:
-    _database_url: str = field(default_factory=lambda: os.getenv("DATABASE_URL"))
+    _mongo_url: str = field(default_factory=lambda: os.getenv("MONGO_URL"))
+    _mongo_db: str = field(default_factory=lambda: os.getenv("MONGO_DB"))
+    _mongo_password: str = field(default_factory=lambda: os.getenv("MONGO_PASSWORD"))
     logger: logging.Logger = field(init=False)
 
+    SECRET_KEY: str = field(default_factory=lambda: os.getenv("SECRET_KEY"))
+    ALGORITHM: str = field(default_factory=lambda: os.getenv("ALGORITHM"))
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = field(default_factory=lambda: int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES")))
+
     TEMPLATE_XLSX: str = field(init=False)
-    INPUT_DIR: str = field(init=False)
-    OUTPUT_DIR: str = field(init=False)
+    XLSX_DIR: str = field(init=False)
+    PDF_DIR: str = field(init=False)
     FILTER_SETTINGS: Dict[int, Dict[str, Any]] = field(init=False)
     VALID_CELLS: Dict[int, List[str]] = field(init=False)
     TRANSFER_WORDS: Tuple[str] = field(init=False)
 
     def __post_init__(self):
         self.logger = setup_logger(
-            level=os.getenv("LOG_LEVEL", "INFO")
+            level=os.getenv("LOG_LEVEL", "INFO"),
+            log_dir=os.getenv("LOG_DIR", "logs"),
+            log_file=os.getenv("LOG_FILE", "web_log")
         )
 
         self.TEMPLATE_XLSX: str = "template.xlsx"
-        self.INPUT_DIR: str = "web_app/src/static/documents/xlsx"
-        self.OUTPUT_DIR: str = "web_app/src/static/documents/pdf"
+        self.XLSX_DIR: str = "web_app/src/static/documents/xlsx"
+        self.PDF_DIR: str = "web_app/src/static/documents/pdf"
 
         self.FILTER_SETTINGS: Dict[int, Dict[str, Any]] = {
             0: {
@@ -50,7 +58,7 @@ class Config:
             },
             3: {
                 "skip": 3,
-                "ignore": ("CD23", "B46", "M27", "B54", "BN46"),
+                "ignore": ("A26", "CD23", "B46", "M27", "B54", "BN46"),
                 "input": ("B18", "AT18", "CL18", "B20", "AT20")
             },
         }
@@ -66,18 +74,22 @@ class Config:
 
     # Валидация конфигурации
     def validate(self):
-        if not self._database_url:
-            self.logger.critical("DATABASE_URL is required in environment variables")
-            raise ValueError("DATABASE_URL is required")
+        if not self._mongo_url:
+            self.logger.critical("MONGO_URL is required in environment variables")
+            raise ValueError("MONGO_URL is required")
 
         self.logger.debug("Configuration validation passed")
 
     @property
-    def DATABASE_URL(self) -> str:
-        return self._database_url
+    def MONGO_URL(self) -> str:
+        return self._mongo_url
+
+    @property
+    def MONGO_DB(self) -> str:
+        return self._mongo_db
 
     def __str__(self) -> str:
-        return f"Config(database={self._database_url}, log_level={self.logger.level})"
+        return f"Config(mongodb={self._mongo_url}, log_level={self.logger.level})"
 
 
 _instance = None

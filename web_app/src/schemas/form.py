@@ -1,5 +1,6 @@
 # Внешние зависимости
 from typing import Annotated, Dict, Any
+from bson import ObjectId
 from pydantic import BaseModel, Field, model_validator
 
 
@@ -17,8 +18,8 @@ class FormRequest(BaseModel):
     gender_male: bool
     gender_female: bool
     birth_place: Annotated[str, Field(strict=True, max_length=25)]
-    birth_state: Annotated[str, Field(strict=True, max_length=21)]
-    birth_city: Annotated[str, Field(strict=True, max_length=21)]
+    birth_state: Annotated[str, Field(strict=True, max_length=31)]
+    birth_city: Annotated[str, Field(strict=True, max_length=31)]
     document_type: Annotated[str, Field(strict=True, max_length=29)]
     document_series: Annotated[str, Field(strict=True, max_length=6)]
     document_number: Annotated[str, Field(strict=True, max_length=21)]
@@ -62,7 +63,8 @@ class FormRequest(BaseModel):
     stay_until_day: Annotated[str, Field(strict=True, max_length=2)]
     stay_until_month: Annotated[str, Field(strict=True, max_length=2)]
     stay_until_year: Annotated[str, Field(strict=True, max_length=4)]
-    migration_card_series: Annotated[str, Field(strict=True, max_length=13)]
+    migration_card_series: Annotated[str, Field(strict=True, max_length=4)]
+    migration_card_number: Annotated[str, Field(strict=True, max_length=13)]
     representative_line_1: Annotated[str, Field(strict=True, max_length=26)]
     representative_line_2: Annotated[str, Field(strict=True, max_length=26)]
     representative_line_3: Annotated[str, Field(strict=True, max_length=26)]
@@ -72,10 +74,20 @@ class FormRequest(BaseModel):
     prev_city: Annotated[str, Field(strict=True, max_length=31)]
     prev_area: Annotated[str, Field(strict=True, max_length=31)]
     prev_road: Annotated[str, Field(strict=True, max_length=31)]
+    prev_building_1: Annotated[str, Field(strict=True, max_length=100)]
+    prev_building_2: Annotated[str, Field(strict=True, max_length=100)]
+    prev_building_3: Annotated[str, Field(strict=True, max_length=100)]
+    prev_room_1: Annotated[str, Field(strict=True, max_length=100)]
+    prev_room_2: Annotated[str, Field(strict=True, max_length=100)]
     current_region: Annotated[str, Field(strict=True, max_length=31)]
     current_city: Annotated[str, Field(strict=True, max_length=31)]
     current_area: Annotated[str, Field(strict=True, max_length=31)]
     current_road: Annotated[str, Field(strict=True, max_length=31)]
+    current_building_1: Annotated[str, Field(strict=True, max_length=100)]
+    current_building_2: Annotated[str, Field(strict=True, max_length=100)]
+    current_building_3: Annotated[str, Field(strict=True, max_length=100)]
+    current_room_1: Annotated[str, Field(strict=True, max_length=100)]
+    current_room_2: Annotated[str, Field(strict=True, max_length=100)]
     room_living: bool
     room_other: bool
     room_organization: bool
@@ -96,7 +108,7 @@ class FormRequest(BaseModel):
     person_individual: bool
     host_surname: Annotated[str, Field(strict=True, max_length=28)]
     host_name: Annotated[str, Field(strict=True, max_length=28)]
-    host_patronymic: Annotated[str, Field(strict=True, max_length=28)]
+    host_patronymic: Annotated[str, Field(strict=True, max_length=23)]
     host_document_type: Annotated[str, Field(strict=True, max_length=10)]
     host_document_series: Annotated[str, Field(strict=True, max_length=4)]
     host_document_number: Annotated[str, Field(strict=True, max_length=12)]
@@ -110,6 +122,11 @@ class FormRequest(BaseModel):
     host_city: Annotated[str, Field(strict=True, max_length=31)]
     host_area: Annotated[str, Field(strict=True, max_length=31)]
     host_road: Annotated[str, Field(strict=True, max_length=31)]
+    host_building_1: Annotated[str, Field(strict=True, max_length=100)]
+    host_building_2: Annotated[str, Field(strict=True, max_length=100)]
+    host_building_3: Annotated[str, Field(strict=True, max_length=100)]
+    host_room_1: Annotated[str, Field(strict=True, max_length=100)]
+    host_room_2: Annotated[str, Field(strict=True, max_length=100)]
     host_phone: Annotated[str, Field(strict=True, max_length=10)]
     host_name_org_line_1: Annotated[str, Field(strict=True, max_length=26)]
     host_name_org_line_2: Annotated[str, Field(strict=True, max_length=16)]
@@ -118,21 +135,6 @@ class FormRequest(BaseModel):
     host_org_city: Annotated[str, Field(strict=True, max_length=31)]
     host_org_area: Annotated[str, Field(strict=True, max_length=31)]
     host_org_road: Annotated[str, Field(strict=True, max_length=31)]
-    prev_building_1: Annotated[str, Field(strict=True, max_length=100)]
-    prev_building_2: Annotated[str, Field(strict=True, max_length=100)]
-    prev_building_3: Annotated[str, Field(strict=True, max_length=100)]
-    prev_room_1: Annotated[str, Field(strict=True, max_length=100)]
-    prev_room_2: Annotated[str, Field(strict=True, max_length=100)]
-    current_building_1: Annotated[str, Field(strict=True, max_length=100)]
-    current_building_2: Annotated[str, Field(strict=True, max_length=100)]
-    current_building_3: Annotated[str, Field(strict=True, max_length=100)]
-    current_room_1: Annotated[str, Field(strict=True, max_length=100)]
-    current_room_2: Annotated[str, Field(strict=True, max_length=100)]
-    host_building_1: Annotated[str, Field(strict=True, max_length=100)]
-    host_building_2: Annotated[str, Field(strict=True, max_length=100)]
-    host_building_3: Annotated[str, Field(strict=True, max_length=100)]
-    host_room_1: Annotated[str, Field(strict=True, max_length=100)]
-    host_room_2: Annotated[str, Field(strict=True, max_length=100)]
     host_org_building_1: Annotated[str, Field(strict=True, max_length=100)]
     host_org_building_2: Annotated[str, Field(strict=True, max_length=100)]
     host_org_building_3: Annotated[str, Field(strict=True, max_length=100)]
@@ -162,3 +164,8 @@ class FormRequest(BaseModel):
                                 break
 
         return data
+
+    class Config:
+        arbitrary_types_allowed = True
+        json_encoders = {ObjectId: str}
+        populate_by_name = True
