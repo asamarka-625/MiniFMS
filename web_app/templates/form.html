@@ -27,12 +27,20 @@
             • <strong>Enter</strong> - перейти к следующей строке
         </div>
     </div>
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Идет создание документа...</p>
+            <p class="loading-subtext">Пожалуйста, подождите</p>
+        </div>
+    </div>
     {% include 'form-1.html' %}
     {% include 'form-2.html' %}
     {% include 'form-3.html' %}
     <div class="form-controls">
         <button class="btn btn-clear" id="clear-form">Очистить форму</button>
         <button class="btn btn-create" id="create-form">Создать файл</button>
+        <button class="btn btn-create" id="update-form" style="display: none;">Обновить файл</button>
         <button class="btn" id="focus-first">Перейти к первой ячейке</button>
     </div>
     <div class="current-cell-info" id="current-cell-info">
@@ -41,6 +49,10 @@
         <span id="current-cell-index">-</span><br>
         <span id="current-cell-value">Значение: -</span>
     </div>
+    <script src="/static/js/auth.js"></script>
     <script src="/static/js/form.js"></script>
+    {% if edit %}
+    <script src="/static/js/edit.js"></script>
+    {% endif %}
 </body>
 </html>

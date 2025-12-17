@@ -6,18 +6,19 @@ from bson import ObjectId
 # Внутренние модули
 from web_app.src.core import mongodb
 from web_app.src.schemas import FormRequest
+from web_app.src.utils import convert_bson_types
 
 
 # Создаем новую форму
 async def create_form(
     form_uuid: UUID,
     form_data: FormRequest,
-    user_id: str
+    user_id: ObjectId
 ) -> Dict[str, Any]:
     form_dict = form_data.model_dump()
     form_dict.update({
-        "uuid": form_uuid,
-        "user_id": ObjectId(user_id),
+        "uuid": str(form_uuid),
+        "user_id": user_id,
         "created_at": datetime.now(UTC)
     })
 
@@ -29,7 +30,7 @@ async def create_form(
     if created_form:
         created_form["id"] = str(created_form.pop("_id"))
 
-    return created_form
+    return convert_bson_types(created_form)
 
 
 # Получаем форму по ID
@@ -42,7 +43,7 @@ async def get_form_by_id(form_id: str) -> Optional[Dict[str, Any]]:
         if form:
             form["id"] = str(form.pop("_id"))
 
-        return form
+        return convert_bson_types(form)
 
     except:
         return None
@@ -50,16 +51,22 @@ async def get_form_by_id(form_id: str) -> Optional[Dict[str, Any]]:
 
 # Получаем форму пользователя
 async def get_user_forms(
-        user_id: str,
+        user_id: ObjectId,
         skip: int = 0,
         limit: int = 100,
 ) -> List[Dict[str, Any]]:
-    query = {"user_id": ObjectId(user_id)}
+    query = {"user_id": user_id}
 
-    cursor = mongodb.db.forms.find(query).sort("created_at", -1).skip(skip).limit(limit)
+    projection = {
+        "_id": 1,
+        "created_at": 1,
+        "uuid": 1
+    }
+
+    cursor = mongodb.db.forms.find(query, projection).sort("created_at", -1).skip(skip).limit(limit)
     forms = await cursor.to_list(length=limit)
 
-    return forms
+    return convert_bson_types(forms)
 
 
 # Обновляем форму

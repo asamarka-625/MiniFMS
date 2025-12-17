@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.documents-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0a5c36;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: #0a5c36;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 2px solid #0a5c36;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.username {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.user-role {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 13px;
+    border: 1px solid #dc3545;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* Панель управления */
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.control-left {
+    display: flex;
+    gap: 10px;
+}
+
+.control-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-primary {
+    background: #0a5c36;
+    color: white;
+    border-color: #0a5c36;
+}
+
+.btn-primary:hover {
+    background: #0c6c3e;
+}
+
+.btn-secondary {
+    background: white;
+    color: #0a5c36;
+    border-color: #0a5c36;
+}
+
+.btn-secondary:hover {
+    background: #f8f9fa;
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.search-box input {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 14px;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    background: #f8f9fa;
+    border: none;
+    border-left: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #e9ecef;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+/* Таблица документов */
+.documents-table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+
+.documents-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.documents-table th {
+    background: #0a5c36;
+    color: white;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: bold;
+    border-right: 1px solid white;
+}
+
+.documents-table th:last-child {
+    border-right: none;
+}
+
+.documents-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+.documents-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.documents-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.documents-table tr:hover:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+/* Статусы документов */
+.status {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+}
+
+.status-draft {
+    background: #ffc107;
+    color: #212529;
+}
+
+.status-active {
+    background: #28a745;
+    color: white;
+}
+
+.status-archived {
+    background: #6c757d;
+    color: white;
+}
+
+.status-pending {
+    background: #17a2b8;
+    color: white;
+}
+
+/* Кнопки действий */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+}
+
+.action-btn-edit {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.action-btn-edit:hover {
+    background: #0056b3;
+}
+
+.action-btn-view {
+    background: #17a2b8;
+    color: white;
+    border-color: #17a2b8;
+}
+
+.action-btn-view:hover {
+    background: #117a8b;
+}
+
+.action-btn-delete {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.action-btn-delete:hover {
+    background: #c82333;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.pagination-btn {
+    padding: 8px 16px;
+    background: #0a5c36;
+    color: white;
+    border: 1px solid #0a5c36;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pagination-btn:disabled {
+    background: #6c757d;
+    border-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Информационная панель */
+.info-panel {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 15px;
+    background: #e9ecef;
+    border: 1px solid #dee2e6;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a5c36;
+}
+
+/* Футер */
+.footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #0a5c36;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.footer-note {
+    font-size: 11px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border: 2px solid #0a5c36;
+}
+
+.modal h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .documents-container {
+        padding: 15px;
+    }
+
+    .control-panel {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .control-left, .control-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-box input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-panel {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .documents-table {
+        font-size: 12px;
+    }
+
+    .action-btn {
+        min-width: 70px;
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .modal-content {
+        min-width: 300px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .documents-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .search-box input {
+        width: 150px;
+    }
+}

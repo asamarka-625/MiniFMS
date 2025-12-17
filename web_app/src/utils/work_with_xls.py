@@ -182,9 +182,8 @@ def exel_to_pdf_libreoffice(filename: UUID) -> None:
 
 
 # Безопасно удаляем файл с обработкой ошибок
-def delete_file_safe(filename: UUID) -> None:
+def delete_file_safe(file_path: str) -> None:
     try:
-        file_path = f"{cfg.XLSX_DIR}/{filename}.xlsx"
         os.remove(file_path)
         cfg.logger.info(f"Файл '{file_path}' успешно удален")
 
@@ -204,4 +203,4 @@ def delete_file_safe(filename: UUID) -> None:
 def run_generate_pdf(data: FormRequest, output_name: UUID):
     create_xlsx_from_data(data=data, output_name=output_name)
     exel_to_pdf_libreoffice(filename=output_name)
-    delete_file_safe(filename=output_name)
+    delete_file_safe(file_path=f"{cfg.XLSX_DIR}/{output_name}.xlsx")

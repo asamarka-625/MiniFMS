@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/documents.css">
+</head>
+<body>
+    <div class="documents-container">
+        <div class="header">
+            <div class="header-left">
+                <div class="logo">📋</div>
+                <h1>Реестр документов ФМС</h1>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <span class="username"></span>
+                </div>
+                <a href="/logout" class="logout-btn">Выйти</a>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="control-left">
+                <button class="btn btn-primary" onclick="location.href='/document/create'">
+                    <span>+</span> Создать документ
+                </button>
+            </div>
+        </div>
+
+        <div class="documents-table-container">
+            <table class="documents-table">
+                <thead>
+                    <tr>
+                        <th width="5%">№</th>
+                        <th width="35%">Наименование документа</th>
+                        <th width="15%">Дата создания</th>
+                        <th width="15%">Изменить</th>
+                        <th width="15%">PDF файл</th>
+                    </tr>
+                </thead>
+                <tbody id="documentsList"></tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn" onclick="changePage(-1)" disabled id="prevBtn">
+                ← Назад
+            </button>
+            <div class="page-info">
+                Страница <span id="currentPage">1</span> из <span id="totalPages">1</span>
+            </div>
+            <button class="pagination-btn" onclick="changePage(1)" id="nextBtn">
+                Вперед →
+            </button>
+        </div>
+    </div>
+
+    <!-- Модальное окно подтверждения -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3>Подтверждение действия</h3>
+            <p id="confirmMessage">Вы уверены, что хотите удалить этот документ?</p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeModal()">Отмена</button>
+                <button class="btn btn-danger" onclick="confirmAction()">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/documents.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,842 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a6c3e 0%, #0c8c4c 50%, #1aac64 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Тонкий фоновый узор в стиле государственных учреждений */
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%);
+    background-size: 100px 100px;
+    background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Мягкие движущиеся градиентные круги */
+.gradient-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.gradient-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.1;
+    animation: floatCircle 25s infinite linear;
+}
+
+.gradient-circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #1aac64 0%, transparent 70%);
+    top: 10%;
+    left: -100px;
+    animation-delay: 0s;
+    animation-duration: 30s;
+}
+
+.gradient-circle:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #0c8c4c 0%, transparent 70%);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 5s;
+    animation-duration: 35s;
+    animation-direction: reverse;
+}
+
+.gradient-circle:nth-child(3) {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #2acc7c 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    animation-delay: 10s;
+    animation-duration: 40s;
+}
+
+@keyframes floatCircle {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
+    50% {
+        transform: translate(0, 100px) scale(0.9);
+    }
+    75% {
+        transform: translate(-50px, 50px) scale(1.05);
+    }
+}
+
+/* Стилизованные линии сканирования */
+.scan-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.scan-line {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.15) 20%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.15) 80%,
+        transparent 100%);
+    opacity: 0;
+    animation: scanMove 6s ease-in-out infinite;
+}
+
+.scan-line:nth-child(1) {
+    top: 30%;
+    animation-delay: 0s;
+}
+
+.scan-line:nth-child(2) {
+    top: 60%;
+    animation-delay: 2s;
+}
+
+.scan-line:nth-child(3) {
+    top: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes scanMove {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Плавное изменение фона */
+@keyframes bgPulse {
+    0%, 100% {
+        background: linear-gradient(135deg, #0a6c3e 0%, #0c8c4c 50%, #1aac64 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #0a4c2a 0%, #0a6c3e 50%, #1a8d52 100%);
+    }
+}
+
+body {
+    animation: bgPulse 30s ease-in-out infinite;
+}
+
+/* Контейнер формы */
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 8px 16px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 0 0 1px rgba(10, 92, 54, 0.1);
+    padding: 40px 35px;
+    max-width: 420px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    border: 2px solid #0c8c4c;
+    backdrop-filter: blur(10px);
+    animation: containerFadeIn 0.8s ease-out;
+}
+
+@keyframes containerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Верхняя полоса */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg,
+        #0c8c4c 0%,
+        #1aac64 25%,
+        #2acc7c 50%,
+        #1aac64 75%,
+        #0c8c4c 100%);
+    background-size: 200% 100%;
+    animation: stripeFlow 3s linear infinite;
+}
+
+@keyframes stripeFlow {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Логотип */
+.logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #0c8c4c 0%, #2acc7c 100%);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    border: 3px solid #0c8c4c;
+    box-shadow:
+        0 8px 20px rgba(10, 92, 54, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        transparent 20%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 80%
+    );
+    transform: rotate(30deg);
+    animation: logoShine 6s infinite linear;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes logoShine {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes logoShine {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+h2 {
+    color: #0c8c4c;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    animation: titleFadeIn 1s ease-out 0.2s both;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        #0c8c4c 20%,
+        #2acc7c 50%,
+        #0c8c4c 80%,
+        transparent 100%);
+    border-radius: 2px;
+    animation: lineWidthPulse 2s ease-in-out infinite;
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineWidthPulse {
+    0%, 100% {
+        width: 80px;
+        opacity: 1;
+    }
+    50% {
+        width: 100px;
+        opacity: 0.8;
+    }
+}
+
+.subtitle {
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0 10px;
+    animation: subtitleFadeIn 1s ease-out 0.4s both;
+}
+
+@keyframes subtitleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Форма */
+.form-group {
+    margin-bottom: 22px;
+    animation: formSlideIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.form-group:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.form-group:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+@keyframes formSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px 45px 15px 20px;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-color: #a0aec0;
+    background: #edf2f7;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #0c8c4c;
+    background: white;
+    box-shadow:
+        0 0 0 3px rgba(10, 92, 54, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #718096;
+    font-weight: normal;
+}
+
+.input-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0c8c4c;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+input[type="text"]:focus + .input-icon,
+input[type="password"]:focus + .input-icon {
+    color: #2acc7c;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Кнопка входа */
+.btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #0c8c4c 0%, #1aac64 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #0c8c4c;
+    animation: btnFadeIn 1s ease-out 1s both;
+    box-shadow: 0 4px 12px rgba(10, 92, 54, 0.3);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
+    transition: left 0.7s ease;
+}
+
+@keyframes btnFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 20px rgba(10, 92, 54, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(10, 92, 54, 0.3);
+}
+
+/* Валидация полей */
+input:valid {
+    border-color: #0c8c4c;
+    background-color: rgba(10, 92, 54, 0.03);
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #c53030;
+    animation: inputError 0.5s ease;
+}
+
+@keyframes inputError {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-3px); }
+    40%, 80% { transform: translateX(3px); }
+}
+
+/* Футер */
+.footer-note {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+    animation: footerFadeIn 1s ease-out 1.2s both;
+}
+
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-note p {
+    color: #718096;
+    font-size: 13px;
+    font-style: italic;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 25px;
+        margin: 0 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .gradient-circle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .scan-lines {
+        opacity: 0.5;
+    }
+}
+
+/* Дополнительные стили для регистрации */
+
+/* Подсказки под полями ввода */
+.input-hint {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 5px;
+    padding-left: 5px;
+    display: none;
+}
+
+input:focus ~ .input-hint {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Индикатор надежности пароля */
+.password-strength {
+    margin-top: 10px;
+    display: none;
+}
+
+input:focus ~ .password-strength {
+    display: block;
+}
+
+.strength-bar {
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.strength-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #f56565;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.strength-text {
+    font-size: 12px;
+    color: #718096;
+}
+
+.strength-text span {
+    font-weight: 600;
+}
+
+/* Индикатор совпадения паролей */
+.password-match {
+    font-size: 12px;
+    margin-top: 5px;
+    padding-left: 5px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.password-match.valid {
+    color: #38a169;
+    display: block;
+}
+
+.password-match.invalid {
+    color: #f56565;
+    display: block;
+}
+
+/* Чекбокс согласия */
+.checkbox-group {
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4a5568;
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #f7fafc;
+    border: 2px solid #cbd5e0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label:hover input ~ .checkmark {
+    border-color: #0c8c4c;
+    background-color: #edf2f7;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+    background-color: #0c8c4c;
+    border-color: #0c8c4c;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked ~ .checkmark::after {
+    display: block;
+}
+
+/* Футер формы */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.form-footer p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #0c8c4c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #2acc7c;
+    text-decoration: underline;
+}
+
+/* Адаптивные стили для мобильных */
+@media (max-width: 480px) {
+    .checkbox-label {
+        font-size: 13px;
+    }
+
+    .form-footer p {
+        font-size: 13px;
+    }
+}
+
+/* Стили для ссылки регистрации */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    animation: fadeIn 0.8s ease-out 1.2s both;
+}
+
+.register-link p {
+    color: #718096;
+    font-size: 14px;
+    margin: 0;
+}
+
+.register-btn {
+    color: #0c8c4c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.register-btn:hover {
+    color: #2acc7c;
+    text-decoration: underline;
+    background-color: rgba(10, 92, 54, 0.05);
+    transform: translateY(-1px);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .register-link p {
+        font-size: 13px;
+    }
+
+    .register-btn {
+        padding: 4px 8px;
+    }
+}

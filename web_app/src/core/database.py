@@ -84,11 +84,13 @@ class MongoDB:
             await cls.connect()
         return cls.db
 
-    """
-    @classmethod
-    @asynccontextmanager
-    async def transaction(cls, **kwargs):
-        async with await cls.client.start_session() as session:
-            async with session.start_transaction(**kwargs):
-                yield session
-    """
+
+_instance = None
+
+
+def get_mongodb() -> MongoDB:
+    global _instance
+    if _instance is None:
+        _instance = MongoDB()
+
+    return _instance

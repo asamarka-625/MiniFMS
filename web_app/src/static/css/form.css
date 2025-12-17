@@ -9,12 +9,13 @@ body {
     background: #f5f5f5;
     padding: 20px;
     min-height: 100vh;
+    background: linear-gradient(135deg, #0a6c3e 0%, #0c8c4c 50%, #1aac64 100%);
 }
 
 .form-container {
     max-width: 1200px;
     margin: 0 auto;
-    background: white;
+    background: #f0ece6;
     padding: 25px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border: 1px solid #ccc;
@@ -152,8 +153,8 @@ body {
 
 .btn {
     padding: 8px 20px;
-    background-color: #0056b3;
-    color: white;
+    background-color: #fff;
+    color: #000;
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -161,26 +162,14 @@ body {
 }
 
 .btn:hover {
-    background-color: #003d82;
-}
-
-.btn-clear {
-    background-color: #6c757d;
-}
-
-.btn-create {
-    background-color: #139d43;
-}
-
-.btn-clear:hover {
-    background-color: #545b62;
+    background-color: #808080;
 }
 
 .current-cell-info {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #f8f9fa;
+    background-color: #b3ecb1;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -190,8 +179,8 @@ body {
 }
 
 .instructions {
-    background-color: #e7f3ff;
-    border: 1px solid #b3d7ff;
+    background-color: #64bb6a;
+    border: 1px solid #fff;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -200,7 +189,7 @@ body {
 
 .instructions h3 {
     margin-bottom: 8px;
-    color: #0056b3;
+    color: #000;
 }
 
 .key-instructions {
@@ -217,4 +206,46 @@ body {
     left: 25%;
     position: relative;
     gap: 1rem;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-subtext {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
 }

@@ -1,5 +1,5 @@
 from web_app.src.core.config import get_config
-from web_app.src.core.database import MongoDB
+from web_app.src.core.database import get_mongodb
 
 cfg = get_config()
-mongodb = MongoDB()
+mongodb = get_mongodb()

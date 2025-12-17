@@ -8,9 +8,13 @@ services:
     depends_on:
       mongodb:
         condition: service_healthy
+      redis:
+        condition: service_healthy
     volumes:
       - ./logs:/app/logs
       - ./web_app/src/static/documents/pdf:/app/web_app/src/static/documents/pdf
+      - ./web_app/src/static/css:/app/web_app/src/static/css
+      - ./web_app/src/static/js:/app/web_app/src/static/js
     env_file:
       - .env
     logging:
@@ -41,5 +45,25 @@ services:
         max-size: "10m"
         max-file: "3"
 
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
 volumes:
   mongodb_data:
+  redis_data:

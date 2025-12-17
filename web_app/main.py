@@ -6,12 +6,16 @@ from fastapi.staticfiles import StaticFiles
 # Внутренние модули
 from web_app.src.core import cfg, mongodb
 from web_app.src.routers import router
-from web_app.src.utils import get_valid_cells
+from web_app.src.utils import get_valid_cells, redis_service
+from web_app.src.middlewares import AuthenticationMiddleware
 
 
 async def startup():
     cfg.logger.info("Инициализируем mongodb")
     await mongodb.connect()
+
+    cfg.logger.info("Инициализируем redis")
+    await redis_service.init_redis()
 
     cfg.logger.info("Инициализируем валидные ячейки из шаблона")
     get_valid_cells()
@@ -20,6 +24,10 @@ async def startup():
 async def shutdown():
     cfg.logger.info("Закрываем соединение с mongodb")
     await mongodb.close()
+
+    cfg.logger.info("Закрываем соединение с redis")
+    await redis_service.close_redis()
+
     cfg.logger.info("Останавливаем приложение...")
 
 
@@ -31,6 +39,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
+app.add_middleware(AuthenticationMiddleware, login_url="/login")
 
 app.mount("/static", StaticFiles(directory="web_app/src/static"), name="static")
 

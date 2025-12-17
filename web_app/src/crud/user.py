@@ -5,7 +5,7 @@ from datetime import datetime, UTC
 # Внутренние модули
 from web_app.src.core import mongodb
 from web_app.src.schemas import UserCreate
-from web_app.src.utils import get_password_hash
+from web_app.src.utils import get_password_hash, convert_bson_types
 
 
 # Создаем нового пользователя
@@ -36,7 +36,7 @@ async def create_user(user_data: UserCreate) -> Dict[str, Any]:
     if created_user:
         created_user["id"] = str(created_user.pop("_id"))
 
-    return created_user
+    return convert_bson_types(created_user)
 
 
 # Получаем пользователя по ID
@@ -49,7 +49,7 @@ async def get_user_by_id(user_id: str) -> Optional[Dict[str, Any]]:
         if user:
             user["id"] = str(user.pop("_id"))
 
-        return user
+        return convert_bson_types(user)
 
     except:
         return None
@@ -65,7 +65,7 @@ async def get_user_by_username(username: str) -> Optional[Dict[str, Any]]:
             if user:
                 user["id"] = str(user.pop("_id"))
 
-            return user
+            return convert_bson_types(user)
 
         except:
             return None

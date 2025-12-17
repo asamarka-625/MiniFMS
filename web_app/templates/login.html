@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <div class="logo-icon">🛂</div>
+            <h2>Система уведомлений в ФМС</h2>
+        </div>
+
+        <p class="subtitle">Введите учетные данные для доступа к системе</p>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Имя пользователя</label>
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Введите ваше имя пользователя"
+                        required
+                        minlength="3"
+                        maxlength="30"
+                    >
+                    <span class="input-icon">👤</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль доступа</label>
+                <div class="input-wrapper">
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Введите пароль безопасности"
+                        required
+                        minlength="1"
+                        title="Пароль должен содержать минимум 1 символ"
+                    >
+                    <span class="input-icon">🔒</span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Вход в систему</button>
+            <div class="register-link">
+                <p>Нет аккаунта? <a href="/register" class="register-btn">Зарегистрироваться</a></p>
+            </div>
+        </form>
+
+        <div class="footer-note">
+            <p>Система защищена. Все действия регистрируются.</p>
+        </div>
+    </div>
+    <script src="/static/js/login.js"></script>
+</body>
+</html>

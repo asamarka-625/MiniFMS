@@ -16,11 +16,21 @@ class Config:
     _mongo_url: str = field(default_factory=lambda: os.getenv("MONGO_URL"))
     _mongo_db: str = field(default_factory=lambda: os.getenv("MONGO_DB"))
     _mongo_password: str = field(default_factory=lambda: os.getenv("MONGO_PASSWORD"))
+    _redis_url: str = field(default_factory=lambda: os.getenv("REDIS_URL"))
     logger: logging.Logger = field(init=False)
 
-    SECRET_KEY: str = field(default_factory=lambda: os.getenv("SECRET_KEY"))
     ALGORITHM: str = field(default_factory=lambda: os.getenv("ALGORITHM"))
+
+    REFRESH_TOKEN_EXPIRE_MINUTES: int = field(default_factory=lambda: int(os.getenv("REFRESH_TOKEN_EXPIRE_MINUTES")))
+    SECRET_REFRESH_KEY: str = field(default_factory=lambda: os.getenv("SECRET_REFRESH_KEY"))
+
     ACCESS_TOKEN_EXPIRE_MINUTES: int = field(default_factory=lambda: int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES")))
+    SECRET_ACCESS_KEY: str = field(default_factory=lambda: os.getenv("SECRET_ACCESS_KEY"))
+
+    CSRF_TOKEN_EXPIRE_MINUTES: int = field(default_factory=lambda: int(os.getenv("CSRF_TOKEN_EXPIRE_MINUTES")))
+    SECRET_CSRF_KEY: str = field(default_factory=lambda: os.getenv("SECRET_CSRF_KEY"))
+
+    USER_CACHE_MINUTES: int = field(default_factory=lambda: int(os.getenv("USER_CACHE_MINUTES")))
 
     TEMPLATE_XLSX: str = field(init=False)
     XLSX_DIR: str = field(init=False)
@@ -88,8 +98,12 @@ class Config:
     def MONGO_DB(self) -> str:
         return self._mongo_db
 
+    @property
+    def REDIS_URL(self) -> str:
+        return self._redis_url
+
     def __str__(self) -> str:
-        return f"Config(mongodb={self._mongo_url}, log_level={self.logger.level})"
+        return f"Config(mongodb={self._mongo_url}, redis={self._redis_url}, log_level={self.logger.level})"
 
 
 _instance = None

@@ -3,7 +3,21 @@ let currentCell = null;
 let currentFieldName = "";
 let allCells = [];
 
-const API_BASE_URL = "/api/v1";
+const API_BASE_URL = "/api/v1/forms";
+
+function showLoadingOverlay() {
+  const overlay = document.getElementById('loadingOverlay');
+  if (overlay) {
+    overlay.style.display = 'flex';
+  }
+}
+
+function hideLoadingOverlay() {
+  const overlay = document.getElementById('loadingOverlay');
+  if (overlay) {
+    overlay.style.display = 'none';
+  }
+}
 
 // Список полей, которые нужно создать
 const fieldConfigurations = [
@@ -365,12 +379,10 @@ function initializeOptionButtons() {
             // Снимаем выделение со всех кнопок этой группы
             document.querySelectorAll(`.checkbox.radio[data-field="${field}"]`).forEach(btn => {
                 btn.textContent = '';
-                btn.classList.remove('active');
                 btn.classList.remove('filled');
             });
 
             // Выделяем текущую кнопку
-            this.classList.add('active');
             this.classList.add('filled');
             this.textContent = '✓';
         });
@@ -432,6 +444,7 @@ function focusFirstCell() {
 
 async function SubmitForm(e) {
     e.preventDefault()
+    showLoadingOverlay();
 
     let data = {};
     fieldConfigurations.forEach(config => {
@@ -479,26 +492,38 @@ async function SubmitForm(e) {
     data["person_organization"] = document.getElementById("person-organization").classList.contains('active') ? true : false;
     data["person_individual"] = document.getElementById("person-individual").classList.contains('active') ? true : false;
 
-    const response = await fetch(`${API_BASE_URL}/create`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
+    try {
+        const response = await apiRequest(url=`${API_BASE_URL}/create`, options={
+            method: "POST",
+            body: JSON.stringify(data)
+        });
 
-    if (!response.ok) {
-        throw Error("HTTP Error");
-    }
+        if (!response.ok) {
+            throw Error("HTTP Error");
+        }
 
-    const answer = await response.json();
+        const answer = await response.json();
 
-    if (answer.status != "success") {
-        throw Error("HTTP answer Error");
+        hideLoadingOverlay();
+
+        if (answer.file_name) {
+            window.open(`/static/src/documents/pdf/${answer.file_name}.pdf`, '_blank');
+        } else {
+            throw new Error('Имя файла не получено от сервера');
+        }
+    } catch (error) {
+        hideLoadingOverlay();
+
+        alert(`Ошибка: ${error.message}`);
+        console.error('Ошибка при создании документа:', error);
+
+        throw error;
     }
 }
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
+    silentRefresh();
+
     initializeFields();
     initializeOptionButtons();
 

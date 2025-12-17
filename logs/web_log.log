@@ -343,3 +343,563 @@
 2025-12-16 13:42:51,987 - web_app.src.core.logger - INFO - Form indexes created
 2025-12-16 13:42:51,987 - web_app.src.core.logger - INFO - Database initialized successfully
 2025-12-16 13:42:51,988 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 09:31:12,591 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:31:13,761 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:31:14,960 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:31:16,359 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:31:18,120 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:31:20,715 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:31:24,917 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:33:11,384 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:33:12,488 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:33:13,670 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:33:15,050 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:33:16,865 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:34:26,763 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:34:27,873 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:34:29,078 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:34:30,486 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:34:32,286 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:35:49,405 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:35:50,566 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:35:51,783 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:35:53,200 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:35:55,012 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:38:00,880 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:38:01,184 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 09:38:01,202 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 09:38:01,202 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 09:38:01,202 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 09:38:01,203 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 09:38:01,204 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 09:38:01,204 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 09:38:01,204 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 09:38:01,204 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 09:38:01,204 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 09:41:22,546 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 09:41:22,840 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 09:41:22,858 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 09:41:22,858 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 09:41:22,858 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 09:41:22,859 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 09:41:22,860 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 09:41:22,860 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 09:41:22,860 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 09:41:22,860 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 09:41:22,860 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:05:27,288 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:05:27,590 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:05:27,608 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:05:27,608 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:05:27,608 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:05:27,609 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:05:27,609 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:05:27,609 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:05:27,609 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:05:27,610 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:05:27,610 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:10:25,537 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:10:25,874 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:10:25,891 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:10:25,892 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:10:25,892 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:10:25,892 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:10:25,893 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:10:25,893 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:10:25,893 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:10:25,893 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:10:25,894 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:27:54,715 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:27:55,000 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:27:55,017 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:27:55,017 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:27:55,017 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:27:55,018 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:27:55,019 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:27:55,019 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:27:55,019 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:27:55,019 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:27:55,019 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:29:20,130 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:29:20,417 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:29:20,434 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:29:20,434 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:29:20,434 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:29:20,435 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:29:20,435 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:29:20,435 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:29:20,435 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:29:20,436 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:29:20,436 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:33:42,104 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:33:42,384 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:33:42,402 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:33:42,402 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:33:42,402 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:33:42,403 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:33:42,403 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:33:42,404 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:33:42,404 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:33:42,404 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:33:42,404 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:44:34,442 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:44:34,724 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:44:34,741 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:44:34,741 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:44:34,742 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:44:34,744 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:44:34,744 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:44:34,745 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:44:34,745 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:44:34,745 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:44:34,745 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:45:23,278 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:45:23,568 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:45:23,586 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:45:23,586 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:45:23,586 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:45:23,588 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:45:23,589 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:45:23,589 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:45:23,589 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:45:23,589 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:45:23,590 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 10:45:59,658 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 10:45:59,944 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 10:45:59,962 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 10:45:59,962 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 10:45:59,962 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 10:45:59,964 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 10:45:59,965 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 10:45:59,965 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 10:45:59,965 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 10:45:59,965 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 10:45:59,966 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 11:51:31,009 - web_app.src.core.logger - ERROR - Unexpected error: Object of type datetime is not JSON serializable
+2025-12-17 11:55:35,915 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 11:55:36,198 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 11:55:36,216 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 11:55:36,216 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 11:55:36,216 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 11:55:36,218 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 11:55:36,219 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 11:55:36,219 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 11:55:36,219 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 11:55:36,219 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 11:55:36,220 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 11:55:56,109 - web_app.src.core.logger - ERROR - Неизвестная ошибка: [Errno 2] No such file or directory: 'libreoffice'
+2025-12-17 12:08:39,377 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:08:39,668 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:08:39,685 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:08:39,685 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:08:39,686 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:08:39,686 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:08:39,687 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:08:39,687 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:08:39,687 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:08:39,687 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:08:39,688 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 12:08:52,752 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 12:08:52,752 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/c17a7831-d0a0-4e74-874f-7f140ae7a7d0.xlsx' успешно удален
+2025-12-17 12:08:52,753 - web_app.src.core.logger - ERROR - Unexpected error: 'UserInDB' object has no attribute 'user_id'
+2025-12-17 12:12:38,051 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:12:38,396 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:12:38,414 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:12:38,414 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:12:38,414 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:12:38,415 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:12:38,416 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:12:38,416 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:12:38,416 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:12:38,416 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:12:38,416 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 12:13:10,835 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 12:13:10,835 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/f5aeb74f-5d6e-48c9-a47c-4bd802e17771.xlsx' успешно удален
+2025-12-17 12:13:10,837 - web_app.src.core.logger - ERROR - Unexpected error: cannot encode native uuid.UUID with UuidRepresentation.UNSPECIFIED. UUIDs can be manually converted to bson.Binary instances using bson.Binary.from_uuid() or a different UuidRepresentation can be configured. See the documentation for UuidRepresentation for more information.
+2025-12-17 12:16:59,275 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:16:59,579 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:16:59,596 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:16:59,597 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:16:59,597 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:16:59,597 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:16:59,598 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:16:59,598 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:16:59,598 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:16:59,598 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:16:59,599 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 12:17:15,293 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 12:17:15,294 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/32ea1650-31d1-443c-a68e-0861ebc608e9.xlsx' успешно удален
+2025-12-17 12:17:15,300 - web_app.src.core.logger - ERROR - Unexpected error: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-12-17 12:24:00,996 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:24:01,293 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:24:01,310 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:24:01,311 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:24:01,311 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:24:01,311 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:24:01,312 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:24:01,313 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:24:01,313 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:24:01,313 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:24:01,313 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 12:24:12,522 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 12:24:12,523 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/92311ae4-7059-4b12-8db1-2d767f5c4451.xlsx' успешно удален
+2025-12-17 12:34:29,019 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:34:29,330 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:34:29,347 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:34:29,347 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:34:29,347 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:34:29,348 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:34:29,349 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:34:29,349 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:34:29,349 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:34:29,350 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:34:29,350 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 12:35:01,294 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 12:35:01,295 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/1e225ba9-fae7-4d42-9d41-b13938c90dcc.xlsx' успешно удален
+2025-12-17 12:38:18,496 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:38:18,808 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:38:18,826 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:38:18,826 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:38:18,826 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:38:18,827 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:38:18,828 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:38:18,828 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:38:18,828 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:38:18,828 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:38:18,828 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 12:55:47,354 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:55:47,649 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:55:47,667 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:55:47,667 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:55:47,667 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:55:47,668 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:55:47,669 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:55:47,669 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:55:47,669 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:55:47,669 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:55:47,670 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 12:56:41,187 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 12:56:41,479 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 12:56:41,497 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 12:56:41,497 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 12:56:41,497 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 12:56:41,498 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 12:56:41,498 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 12:56:41,499 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 12:56:41,499 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 12:56:41,499 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 12:56:41,499 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:05:33,462 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:05:33,759 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:05:33,776 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:05:33,776 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:05:33,777 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:05:33,777 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:05:33,778 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:05:33,778 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:05:33,778 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:05:33,778 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:05:33,779 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:08:53,265 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:08:53,554 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:08:53,571 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:08:53,571 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:08:53,571 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:08:53,572 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:08:53,573 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:08:53,573 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:08:53,573 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:08:53,573 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:08:53,573 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:13:36,010 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:13:36,297 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:13:36,314 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:13:36,314 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:13:36,315 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:13:36,315 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:13:36,316 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:13:36,316 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:13:36,316 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:13:36,316 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:13:36,317 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:19:16,358 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:19:16,651 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:19:16,668 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:19:16,669 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:19:16,669 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:19:16,669 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:19:16,670 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:19:16,670 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:19:16,670 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:19:16,670 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:19:16,671 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:20:26,325 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:20:26,626 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:20:26,644 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:20:26,644 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:20:26,644 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:20:26,645 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:20:26,646 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:20:26,646 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:20:26,646 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:20:26,646 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:20:26,647 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:21:28,126 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:21:28,471 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:21:28,488 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:21:28,488 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:21:28,488 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:21:28,489 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:21:28,489 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:21:28,489 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:21:28,489 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:21:28,489 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:21:28,490 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:23:11,245 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:23:11,556 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:23:11,577 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:23:11,577 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:23:11,577 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:23:11,578 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:23:11,579 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:23:11,579 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:23:11,579 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:23:11,579 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:23:11,579 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:24:08,590 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:24:08,884 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:24:08,901 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:24:08,901 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:24:08,901 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:24:08,902 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:24:08,902 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:24:08,903 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:24:08,903 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:24:08,903 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:24:08,903 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:24:17,914 - web_app.src.core.logger - INFO - gfdgdfgdgdgd
+2025-12-17 13:25:47,368 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:25:47,688 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:25:47,716 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:25:47,716 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:25:47,716 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:25:47,717 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:25:47,719 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:25:47,719 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:25:47,720 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:25:47,720 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:25:47,720 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:39:55,190 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:39:55,488 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:39:55,506 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:39:55,506 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:39:55,506 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:39:55,507 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:39:55,508 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:39:55,508 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:39:55,508 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:39:55,508 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:39:55,508 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:40:01,458 - web_app.src.core.logger - INFO - http://localhost:8000/api/v1/user/me - */*
+2025-12-17 13:40:01,460 - web_app.src.core.logger - INFO - http://localhost:8000/api/v1/user/me/forms?skip=0&limit=10 - */*
+2025-12-17 13:41:14,121 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:41:14,431 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:41:14,450 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:41:14,450 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:41:14,450 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:41:14,451 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:41:14,451 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:41:14,451 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:41:14,451 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:41:14,452 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:41:14,452 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:42:51,443 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:42:51,745 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:42:51,763 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:42:51,763 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:42:51,763 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:42:51,764 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:42:51,765 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:42:51,765 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:42:51,765 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:42:51,765 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:42:51,765 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:43:51,551 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:43:51,838 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:43:51,856 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:43:51,856 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:43:51,856 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:43:51,857 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:43:51,857 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:43:51,857 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:43:51,857 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:43:51,857 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:43:51,858 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:44:00,458 - web_app.src.core.logger - INFO - http://localhost:8000/documents
+2025-12-17 13:44:00,529 - web_app.src.core.logger - INFO - http://localhost:8000/static/js/documents.js
+2025-12-17 13:44:00,556 - web_app.src.core.logger - INFO - http://localhost:8000/api/v1/auth/refresh
+2025-12-17 13:44:00,561 - web_app.src.core.logger - INFO - http://localhost:8000/api/v1/auth/refresh
+2025-12-17 13:44:00,562 - web_app.src.core.logger - INFO - http://localhost:8000/api/v1/auth/refresh
+2025-12-17 13:44:00,577 - web_app.src.core.logger - INFO - http://localhost:8000/login
+2025-12-17 13:44:00,671 - web_app.src.core.logger - INFO - http://localhost:8000/api/v1/user/me
+2025-12-17 13:44:00,674 - web_app.src.core.logger - INFO - http://localhost:8000/api/v1/user/me/forms?skip=0&limit=10
+2025-12-17 13:46:34,993 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:46:35,287 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:46:35,305 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:46:35,305 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:46:35,305 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:46:35,306 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:46:35,307 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:46:35,307 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:46:35,307 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:46:35,307 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:46:35,307 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:46:39,889 - web_app.src.core.logger - INFO - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTQyOGEyZjYzODE5NDY1MDRiZDU5MWUiLCJ0eXBlIjoicmVmcmVzaCIsImp0aSI6IjhlMjBkNWRiLWU2OGMtNDQ2YS05N2I0LTkzZjgwOWY5OWZiNSIsImV4cCI6MTc2Njg0MzA0MCwiaWF0IjoxNzY1OTc5MDQwfQ.ucY_KrWzaKzU0WbU02K91zhSSlBTt6o9teAudv9Bgw0
+2025-12-17 13:46:40,012 - web_app.src.core.logger - INFO - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTQyOGEyZjYzODE5NDY1MDRiZDU5MWUiLCJ0eXBlIjoicmVmcmVzaCIsImp0aSI6IjhlMjBkNWRiLWU2OGMtNDQ2YS05N2I0LTkzZjgwOWY5OWZiNSIsImV4cCI6MTc2Njg0MzA0MCwiaWF0IjoxNzY1OTc5MDQwfQ.ucY_KrWzaKzU0WbU02K91zhSSlBTt6o9teAudv9Bgw0
+2025-12-17 13:46:40,014 - web_app.src.core.logger - INFO - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTQyOGEyZjYzODE5NDY1MDRiZDU5MWUiLCJ0eXBlIjoicmVmcmVzaCIsImp0aSI6IjhlMjBkNWRiLWU2OGMtNDQ2YS05N2I0LTkzZjgwOWY5OWZiNSIsImV4cCI6MTc2Njg0MzA0MCwiaWF0IjoxNzY1OTc5MDQwfQ.ucY_KrWzaKzU0WbU02K91zhSSlBTt6o9teAudv9Bgw0
+2025-12-17 13:46:40,097 - web_app.src.core.logger - INFO - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTQyOGEyZjYzODE5NDY1MDRiZDU5MWUiLCJ0eXBlIjoicmVmcmVzaCIsImp0aSI6IjhlMjBkNWRiLWU2OGMtNDQ2YS05N2I0LTkzZjgwOWY5OWZiNSIsImV4cCI6MTc2Njg0MzA0MCwiaWF0IjoxNzY1OTc5MDQwfQ.ucY_KrWzaKzU0WbU02K91zhSSlBTt6o9teAudv9Bgw0
+2025-12-17 13:47:43,158 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:47:43,453 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:47:43,471 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:47:43,471 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:47:43,471 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:47:43,472 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:47:43,472 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:47:43,472 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:47:43,472 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:47:43,472 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:47:43,473 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:47:53,502 - web_app.src.core.logger - ERROR - 4
+2025-12-17 13:47:53,503 - web_app.src.core.logger - ERROR - 4
+2025-12-17 13:49:05,169 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:49:05,468 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:49:05,487 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:49:05,487 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:49:05,487 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:49:05,488 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:49:05,489 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:49:05,489 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:49:05,489 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:49:05,489 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:49:05,490 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:49:10,356 - web_app.src.core.logger - INFO - 1
+2025-12-17 13:49:10,427 - web_app.src.core.logger - INFO - 1
+2025-12-17 13:49:10,495 - web_app.src.core.logger - INFO - 0
+2025-12-17 13:49:10,495 - web_app.src.core.logger - INFO - 0
+2025-12-17 13:50:15,341 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:50:15,646 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:50:15,663 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:50:15,663 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:50:15,663 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:50:15,664 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:50:15,665 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:50:15,665 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:50:15,665 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:50:15,665 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:50:15,665 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:50:19,771 - web_app.src.core.logger - INFO - refresh:69428a2f6381946504bd591e:9ec1bac0-3380-456e-be1a-b7d7431ba534 - 1
+2025-12-17 13:50:19,845 - web_app.src.core.logger - INFO - refresh:69428a2f6381946504bd591e:9ec1bac0-3380-456e-be1a-b7d7431ba534 - 1
+2025-12-17 13:50:19,847 - web_app.src.core.logger - INFO - refresh:69428a2f6381946504bd591e:9ec1bac0-3380-456e-be1a-b7d7431ba534 - 1
+2025-12-17 13:50:19,914 - web_app.src.core.logger - INFO - refresh:69428a2f6381946504bd591e:9ec1bac0-3380-456e-be1a-b7d7431ba534 - 0
+2025-12-17 13:53:34,822 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:53:35,127 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:53:35,145 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:53:35,145 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:53:35,145 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:53:35,146 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:53:35,146 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:53:35,146 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:53:35,147 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:53:35,147 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:53:35,147 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 13:53:42,926 - web_app.src.core.logger - INFO - 1
+2025-12-17 13:53:43,010 - web_app.src.core.logger - INFO - 1
+2025-12-17 13:53:43,016 - web_app.src.core.logger - INFO - 0
+2025-12-17 13:53:43,019 - web_app.src.core.logger - INFO - 1
+2025-12-17 13:53:43,139 - web_app.src.core.logger - INFO - 1
+2025-12-17 13:54:18,072 - web_app.src.core.logger - INFO - 1
+2025-12-17 13:57:04,000 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 13:57:04,289 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 13:57:04,306 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 13:57:04,306 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 13:57:04,307 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 13:57:04,307 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 13:57:04,308 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 13:57:04,308 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 13:57:04,308 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 13:57:04,308 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 13:57:04,309 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 14:18:30,264 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 14:18:30,574 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 14:18:30,592 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 14:18:30,592 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 14:18:30,592 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 14:18:30,593 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 14:18:30,594 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 14:18:30,594 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 14:18:30,594 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 14:18:30,594 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 14:18:30,594 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 14:18:51,480 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 14:18:51,480 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/be8633f4-e913-41ba-a9de-ba4a6e7e549f.xlsx' успешно удален
+2025-12-17 14:22:49,821 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 14:22:50,123 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 14:22:50,141 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 14:22:50,141 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 14:22:50,141 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 14:22:50,142 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 14:22:50,142 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 14:22:50,142 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 14:22:50,142 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 14:22:50,143 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 14:22:50,143 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 14:24:07,499 - web_app.src.core.logger - ERROR - Unexpected error: '_id'
+2025-12-17 14:24:55,992 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 14:24:56,306 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 14:24:56,324 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 14:24:56,324 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 14:24:56,324 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 14:24:56,325 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 14:24:56,325 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 14:24:56,325 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 14:24:56,326 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 14:24:56,326 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 14:24:56,326 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 14:24:59,208 - web_app.src.core.logger - ERROR - Unexpected error: '_id'
+2025-12-17 14:25:34,224 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 14:25:34,524 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 14:25:34,541 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 14:25:34,542 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 14:25:34,542 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 14:25:34,543 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 14:25:34,543 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 14:25:34,543 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 14:25:34,543 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 14:25:34,543 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 14:25:34,544 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 14:51:29,667 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 14:51:29,668 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/f306a6d8-97ef-43b7-8d92-58782137a76b.xlsx' успешно удален
+2025-12-17 15:06:39,675 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 15:06:39,979 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 15:06:39,996 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 15:06:39,997 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 15:06:39,997 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 15:06:39,997 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 15:06:39,998 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 15:06:39,998 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 15:06:39,998 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 15:06:39,998 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 15:06:39,999 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 15:12:07,330 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-17 15:12:07,626 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-17 15:12:07,643 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-17 15:12:07,644 - web_app.src.core.logger - INFO - Database: fms
+2025-12-17 15:12:07,644 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-17 15:12:07,644 - web_app.src.core.logger - INFO - User indexes created
+2025-12-17 15:12:07,645 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-17 15:12:07,645 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-17 15:12:07,645 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-17 15:12:07,646 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-17 15:12:07,646 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-17 15:12:24,957 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-17 15:12:24,957 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/f306a6d8-97ef-43b7-8d92-58782137a76b.xlsx' успешно удален

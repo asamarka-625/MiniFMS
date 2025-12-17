@@ -5,10 +5,10 @@ from fastapi.responses import JSONResponse
 # Внутренние модули
 from web_app.src.core import cfg
 from web_app.src.schemas import FormRequest
-from web_app.src.utils import run_generate_pdf
+from web_app.src.utils import run_generate_pdf, delete_file_safe
 from web_app.src.crud import create_form, get_form_by_id, update_form, delete_form
 from web_app.src.models import UserInDB
-from web_app.src.dependencies import get_current_user
+from web_app.src.dependencies import get_current_user_by_access_token
 
 
 router = APIRouter(
@@ -33,7 +33,7 @@ async def get_cells():
 )
 async def create_form_from_data(
     data: FormRequest,
-    current_user: UserInDB = Depends(get_current_user)
+    current_user: UserInDB = Depends(get_current_user_by_access_token),
 ):
     file_name = uuid.uuid4()
     run_generate_pdf(data=data, output_name=file_name)
@@ -42,12 +42,11 @@ async def create_form_from_data(
     created_form = await create_form(
         form_uuid=file_name,
         form_data=data,
-        user_id=current_user.user_id
+        user_id=current_user.id
     )
 
     return {
         "message": "Form created successfully",
-        "form": created_form,
         "form_id": created_form["id"],
         "file_name": file_name
     }
@@ -60,7 +59,7 @@ async def create_form_from_data(
 )
 async def get_my_form(
     form_id: str,
-    current_user: UserInDB = Depends(get_current_user)
+    current_user: UserInDB = Depends(get_current_user_by_access_token),
 ):
     # Получаем форму
     form = await get_form_by_id(form_id)
@@ -71,12 +70,13 @@ async def get_my_form(
         )
 
     # Проверяем, что форма принадлежит пользователю
-    if form["user_id"] != current_user.user_id:
+    if form["user_id"] != str(current_user.id):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You don't have permission to access this form"
         )
 
+    del form["user_id"]
     return form
 
 
@@ -88,7 +88,7 @@ async def get_my_form(
 async def update_my_form(
     form_id: str,
     data: FormRequest,
-    current_user: UserInDB = Depends(get_current_user)
+    current_user: UserInDB = Depends(get_current_user_by_access_token),
 ):
     # Получаем форму
     form = await get_form_by_id(form_id)
@@ -99,23 +99,20 @@ async def update_my_form(
         )
 
     # Проверяем, что форма принадлежит пользователю
-    if form["user_id"] != current_user.user_id:
+    if form["user_id"] != str(current_user.id):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You don't have permission to access this form"
         )
 
-    # Обновляем форму
+    run_generate_pdf(data=data, output_name=form["uuid"])
+
     updated_form = await update_form(form_id, data)
-    if not updated_form:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Form not found"
-        )
 
     return {
-        "message": "Form updated successfully",
-        "form": updated_form
+        "message": "Form created successfully",
+        "form_id": updated_form["id"],
+        "file_name": updated_form["uuid"]
     }
 
 
@@ -126,7 +123,7 @@ async def update_my_form(
 )
 async def delete_my_form(
     form_id: str,
-    current_user: UserInDB = Depends(get_current_user)
+    current_user: UserInDB = Depends(get_current_user_by_access_token),
 ):
     # Получаем форму
     form = await get_form_by_id(form_id)
@@ -137,7 +134,7 @@ async def delete_my_form(
         )
 
     # Проверяем, что форма принадлежит пользователю
-    if form["user_id"] != current_user.user_id:
+    if form["user_id"] != str(current_user.id):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You don't have permission to access this form"
@@ -151,5 +148,6 @@ async def delete_my_form(
             detail="Failed to delete form"
         )
 
+    delete_file_safe(file_path=f"{cfg.PDF_DIR}/{form["uuid"]}.pdf")
     return {"message": "Form deleted successfully"}
 
