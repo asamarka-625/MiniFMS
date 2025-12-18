@@ -50,10 +50,22 @@ app.include_router(router)
 # Настройка CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=cfg.ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=[
+        "Accept",
+        "Accept-Language",
+        "Authorization",
+        "Content-Type",
+        "Content-Language",
+        "Origin",
+        "Referer",
+        "User-Agent",
+        "X-CSRF-Token",
+        "X-Requested-With",
+    ],
+    max_age=600
 )
 
 

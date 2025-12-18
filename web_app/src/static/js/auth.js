@@ -64,9 +64,29 @@ async function logoutRequest() {
     }
 }
 
+// Загрузка данных пользователя
+async function loadUserData() {
+    try {
+        const response = await apiRequest(url=`${API_BASE_URL}/user/me`, options={
+            method: 'GET'
+        });
+
+        if (response.ok) {
+            const userData = await response.json();
+            document.querySelector('.username').textContent = userData.username || 'Пользователь';
+        }
+    } catch (error) {
+        console.error('Ошибка загрузки данных пользователя:', error);
+        document.querySelector('.username').textContent = 'Ошибка загрузки';
+    }
+}
+
 document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
         silentRefresh();
     }
+    document.getElementById("logout-btn").addEventListener('click', async function() {
+        logoutRequest();
+    });
 });
 

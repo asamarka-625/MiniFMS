@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/form.css">
 </head>
 <body>
+    {% include 'header.html' %}
     <div class="instructions">
         <h3>Инструкция по заполнению формы</h3>
         <p>1. Нажмите на любую ячейку для ее активации (подсветится синим).</p>
@@ -38,10 +40,10 @@
     {% include 'form-2.html' %}
     {% include 'form-3.html' %}
     <div class="form-controls">
-        <button class="btn btn-clear" id="clear-form">Очистить форму</button>
-        <button class="btn btn-create" id="create-form">Создать файл</button>
-        <button class="btn btn-create" id="update-form" style="display: none;">Обновить файл</button>
-        <button class="btn" id="focus-first">Перейти к первой ячейке</button>
+        <button class="btn btn-clear" id="clear-form">⭕ Очистить форму</button>
+        <button class="btn btn-create" id="create-form">➕️ Создать файл</button>
+        <button class="btn btn-create" id="update-form" style="display: none;">♻️ Обновить файл</button>
+        <button class="btn" id="focus-first">⤴️ Перейти к первой ячейке</button>
     </div>
     <div class="current-cell-info" id="current-cell-info">
         <strong>Активная ячейка:</strong><br>

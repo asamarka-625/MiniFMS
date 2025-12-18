@@ -39,6 +39,8 @@ class Config:
     VALID_CELLS: Dict[int, List[str]] = field(init=False)
     TRANSFER_WORDS: Tuple[str] = field(init=False)
 
+    _allowed_origins_env: str = field(default_factory=lambda: os.getenv("ALLOWED_ORIGINS"))
+
     def __post_init__(self):
         self.logger = setup_logger(
             level=os.getenv("LOG_LEVEL", "INFO"),
@@ -101,6 +103,10 @@ class Config:
     @property
     def REDIS_URL(self) -> str:
         return self._redis_url
+
+    @property
+    def ALLOWED_ORIGINS(self) -> List[str]:
+        return [origin.strip() for origin in self._allowed_origins_env.split(",") if origin.strip()]
 
     def __str__(self) -> str:
         return f"Config(mongodb={self._mongo_url}, redis={self._redis_url}, log_level={self.logger.level})"

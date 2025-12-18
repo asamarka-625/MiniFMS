@@ -8,7 +8,7 @@ from web_app.src.schemas import FormRequest
 from web_app.src.utils import run_generate_pdf, delete_file_safe
 from web_app.src.crud import create_form, get_form_by_id, update_form, delete_form
 from web_app.src.models import UserInDB
-from web_app.src.dependencies import get_current_user_by_access_token
+from web_app.src.dependencies import get_current_user_by_access_token, verify_csrf_token
 
 
 router = APIRouter(
@@ -34,7 +34,11 @@ async def get_cells():
 async def create_form_from_data(
     data: FormRequest,
     current_user: UserInDB = Depends(get_current_user_by_access_token),
+    csrf_user_id: str = Depends(verify_csrf_token)
 ):
+    if not str(current_user.id) == csrf_user_id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Token user mismatch")
+
     file_name = uuid.uuid4()
     run_generate_pdf(data=data, output_name=file_name)
 
@@ -89,7 +93,12 @@ async def update_my_form(
     form_id: str,
     data: FormRequest,
     current_user: UserInDB = Depends(get_current_user_by_access_token),
+    csrf_user_id: str = Depends(verify_csrf_token)
 ):
+    user_id_str = str(current_user.id)
+    if not user_id_str == csrf_user_id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Token user mismatch")
+
     # Получаем форму
     form = await get_form_by_id(form_id)
     if not form:
@@ -99,7 +108,7 @@ async def update_my_form(
         )
 
     # Проверяем, что форма принадлежит пользователю
-    if form["user_id"] != str(current_user.id):
+    if form["user_id"] != user_id_str:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You don't have permission to access this form"
@@ -124,7 +133,12 @@ async def update_my_form(
 async def delete_my_form(
     form_id: str,
     current_user: UserInDB = Depends(get_current_user_by_access_token),
+    csrf_user_id: str = Depends(verify_csrf_token)
 ):
+    user_id_str = str(current_user.id)
+    if not user_id_str == csrf_user_id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Token user mismatch")
+
     # Получаем форму
     form = await get_form_by_id(form_id)
     if not form:
@@ -134,7 +148,7 @@ async def delete_my_form(
         )
 
     # Проверяем, что форма принадлежит пользователю
-    if form["user_id"] != str(current_user.id):
+    if form["user_id"] != user_id_str:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You don't have permission to access this form"

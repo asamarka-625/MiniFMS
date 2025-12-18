@@ -9,7 +9,6 @@ body {
     background: #f5f5f5;
     padding: 20px;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0a6c3e 0%, #0c8c4c 50%, #1aac64 100%);
 }
 
 .form-container {
@@ -153,8 +152,8 @@ body {
 
 .btn {
     padding: 8px 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: #128a53;
+    color: #fff;
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -162,12 +161,12 @@ body {
 }
 
 .btn:hover {
-    background-color: #808080;
+    background-color: #0a5c36;
 }
 
 .current-cell-info {
     position: fixed;
-    top: 20px;
+    top: 120px;
     right: 20px;
     background-color: #b3ecb1;
     border: 1px solid #ccc;
