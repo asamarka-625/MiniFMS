@@ -33,7 +33,7 @@ web_app/
 │   ├── models/        # Pydantic модели
 │   ├── schemas/       # Схемы данных
 │   ├── static/        # Статические файлы (CSS, JS, xlsx, pdf)
-│   └──  utils/        # Вспомогательные утилиты  
+│   └── utils/        # Вспомогательные утилиты  
 │   main.py        # Точка входа
 ├── templates/         # HTML шаблоны
 
