@@ -986,3 +986,133 @@
 2025-12-18 06:50:03,271 - web_app.src.core.logger - INFO - Инициализируем redis
 2025-12-18 06:50:03,271 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
 2025-12-18 06:50:03,271 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:08:34,258 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:08:34,580 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:08:34,599 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:08:34,599 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:08:34,599 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:08:34,600 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:08:34,600 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:08:34,601 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:08:34,601 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:08:34,601 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:08:34,601 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:09:59,025 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:09:59,332 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:09:59,352 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:09:59,352 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:09:59,352 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:09:59,353 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:09:59,353 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:09:59,353 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:09:59,353 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:09:59,353 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:09:59,354 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:10:22,237 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 09:10:22,238 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/2a349c6c-1842-4c3c-8560-da4e7d8984ce.xlsx' успешно удален
+2025-12-18 09:28:06,964 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:28:07,261 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:28:07,278 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:28:07,278 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:28:07,279 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:28:07,279 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:28:07,280 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:28:07,280 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:28:07,280 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:28:07,280 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:28:07,281 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:29:29,731 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:29:30,030 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:29:30,048 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:29:30,048 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:29:30,048 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:29:30,049 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:29:30,050 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:29:30,050 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:29:30,050 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:29:30,050 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:29:30,050 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:30:02,706 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:30:03,011 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:30:03,028 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:30:03,028 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:30:03,028 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:30:03,029 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:30:03,030 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:30:03,030 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:30:03,030 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:30:03,030 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:30:03,030 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:33:53,389 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:33:53,694 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:33:53,711 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:33:53,712 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:33:53,712 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:33:53,712 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:33:53,713 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:33:53,713 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:33:53,713 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:33:53,713 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:33:53,714 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:34:15,348 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 09:34:15,348 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/2a349c6c-1842-4c3c-8560-da4e7d8984ce.xlsx' успешно удален
+2025-12-18 09:41:33,140 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:41:33,440 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:41:33,458 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:41:33,458 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:41:33,458 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:41:33,459 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:41:33,460 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:41:33,460 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:41:33,460 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:41:33,460 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:41:33,460 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:42:05,647 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:42:05,944 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:42:05,962 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:42:05,962 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:42:05,962 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:42:05,963 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:42:05,964 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:42:05,964 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:42:05,964 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:42:05,964 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:42:05,964 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:44:11,299 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 09:44:11,692 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 09:44:11,709 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 09:44:11,710 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 09:44:11,710 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 09:44:11,710 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 09:44:11,711 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 09:44:11,711 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 09:44:11,711 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 09:44:11,712 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 09:44:11,712 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 09:44:29,444 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 09:44:29,444 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/5c0bbeda-3439-4571-b32e-43dfe264eb0b.xlsx' успешно удален
+2025-12-18 09:45:13,313 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 09:45:13,314 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/5c0bbeda-3439-4571-b32e-43dfe264eb0b.xlsx' успешно удален
+2025-12-18 10:04:56,042 - web_app.src.core.logger - INFO - Configuration initialized
+2025-12-18 10:04:56,338 - web_app.src.core.logger - INFO - Инициализируем mongodb
+2025-12-18 10:04:56,356 - web_app.src.core.logger - INFO - Connected to MongoDB: mongodb://maks:maks123@mongodb:27017/fms?authSource=admin
+2025-12-18 10:04:56,356 - web_app.src.core.logger - INFO - Database: fms
+2025-12-18 10:04:56,356 - web_app.src.core.logger - INFO - Initializing database...
+2025-12-18 10:04:56,357 - web_app.src.core.logger - INFO - User indexes created
+2025-12-18 10:04:56,357 - web_app.src.core.logger - INFO - Form indexes created
+2025-12-18 10:04:56,358 - web_app.src.core.logger - INFO - Database initialized successfully
+2025-12-18 10:04:56,358 - web_app.src.core.logger - INFO - Инициализируем redis
+2025-12-18 10:04:56,358 - web_app.src.core.logger - INFO - Инициализируем соединение Redis
+2025-12-18 10:04:56,358 - web_app.src.core.logger - INFO - Инициализируем валидные ячейки из шаблона
+2025-12-18 10:05:16,983 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 10:05:16,983 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/5c0bbeda-3439-4571-b32e-43dfe264eb0b.xlsx' успешно удален
+2025-12-18 10:08:18,047 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 10:08:18,047 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/57bf7dd8-eb8b-41e0-ba54-ae0a8b98dec4.xlsx' успешно удален
+2025-12-18 10:08:45,567 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 10:08:45,567 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/57bf7dd8-eb8b-41e0-ba54-ae0a8b98dec4.xlsx' успешно удален
+2025-12-18 10:09:37,936 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 10:09:37,936 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/57bf7dd8-eb8b-41e0-ba54-ae0a8b98dec4.xlsx' успешно удален
+2025-12-18 10:10:40,053 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 10:10:40,053 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/57bf7dd8-eb8b-41e0-ba54-ae0a8b98dec4.xlsx' успешно удален
+2025-12-18 10:10:57,371 - web_app.src.core.logger - INFO - Конвертация успешно завершена
+2025-12-18 10:10:57,371 - web_app.src.core.logger - INFO - Файл 'web_app/src/static/documents/xlsx/57bf7dd8-eb8b-41e0-ba54-ae0a8b98dec4.xlsx' успешно удален

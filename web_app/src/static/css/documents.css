@@ -140,6 +140,10 @@ body {
     vertical-align: middle;
 }
 
+.documents-table td:last-child {
+    display: flex;
+}
+
 .documents-table tr:hover {
     background-color: #f8f9fa;
 }

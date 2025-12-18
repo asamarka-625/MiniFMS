@@ -48,7 +48,7 @@ async def login(
         path="/",
         value=refresh_token,
         httponly=True,
-        secure=True, # HTTPS
+        secure=False, # HTTP
         samesite="lax",
         max_age=cfg.REFRESH_TOKEN_EXPIRE_MINUTES * 60
     )
@@ -83,7 +83,7 @@ async def get_refresh_token(
         path="/",
         value=refresh_token,
         httponly=True,
-        secure=True, # HTTPS
+        secure=False, # HTTP
         samesite="lax",
         max_age=cfg.REFRESH_TOKEN_EXPIRE_MINUTES * 60
     )

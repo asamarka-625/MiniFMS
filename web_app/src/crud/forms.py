@@ -19,7 +19,8 @@ async def create_form(
     form_dict.update({
         "uuid": str(form_uuid),
         "user_id": user_id,
-        "created_at": datetime.now(UTC)
+        "created_at": datetime.now(UTC),
+        "updated_at": datetime.now(UTC),
     })
 
     result = await mongodb.db.forms.insert_one(form_dict)
@@ -60,10 +61,11 @@ async def get_user_forms(
     projection = {
         "_id": 1,
         "created_at": 1,
+        "updated_at": 1,
         "uuid": 1
     }
 
-    cursor = mongodb.db.forms.find(query, projection).sort("created_at", -1).skip(skip).limit(limit)
+    cursor = mongodb.db.forms.find(query, projection).sort("updated_at", -1).skip(skip).limit(limit)
     forms = await cursor.to_list(length=limit)
 
     return convert_bson_types(forms)
@@ -75,6 +77,8 @@ async def update_form(form_id: str, form_data: FormRequest) -> Optional[Dict[str
 
     if not new_data:
         return None
+
+    new_data["updated_at"] = datetime.now(UTC)
 
     await mongodb.db.forms.update_one(
         {"_id": ObjectId(form_id)},

@@ -68,11 +68,6 @@ function renderDocuments() {
                 <div style="color: #666; font-style: italic;">
                     📄 Нет доступных документов
                 </div>
-                <button onclick="location.href='/create'"
-                        class="btn btn-primary"
-                        style="margin-top: 15px;">
-                    + Создать первый документ
-                </button>
             </td>
         `;
         tbody.appendChild(emptyRow);
@@ -84,12 +79,25 @@ function renderDocuments() {
     documents.forEach((doc, index) => {
         const row = document.createElement('tr');
 
-        // Форматирование даты
-        let formattedDate = '--.--.----';
+        let created_at = 'не задано';
         if (doc.created_at) {
             const date = new Date(doc.created_at);
             if (!isNaN(date)) {
-                formattedDate = date.toLocaleString('ru-RU', {
+                created_at = date.toLocaleString('ru-RU', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+        }
+
+        let updated_at = 'не задано';
+        if (doc.updated_at) {
+            const date = new Date(doc.updated_at);
+            if (!isNaN(date)) {
+                updated_at = date.toLocaleString('ru-RU', {
                     day: '2-digit',
                     month: '2-digit',
                     year: 'numeric',
@@ -101,14 +109,15 @@ function renderDocuments() {
 
         // Определяем URL для редактирования и PDF
         const editUrl = `/document/edit/${doc._id}`;
-        const pdfUrl = `${API_BASE_URL}/static/documents/pdf/${doc.uuid}.pdf`;
+        const pdfUrl = `/static/documents/pdf/${doc.uuid}.pdf`;
 
         row.innerHTML = `
             <td>${startIndex + index + 1}</td>
             <td>
                 <strong>${doc._id}</strong>
             </td>
-            <td>${formattedDate}</td>
+            <td>${created_at}</td>
+            <td>${updated_at}</td>
             <td>
                 <a href="${editUrl}" class="action-btn action-btn-edit" title="Редактировать документ">
                     ✏️ Редактировать

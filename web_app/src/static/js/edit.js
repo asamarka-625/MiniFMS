@@ -67,14 +67,6 @@ function fillFormWithData(data) {
 }
 
 document.addEventListener('DOMContentLoaded', async function() {
-    try {
-        await silentRefresh();
-
-        await loadDocumentData();
-    } catch (error) {
-        console.error('Ошибка при инициализации:', error);
-    }
-
     document.getElementById("create-form").style.display = "none";
     document.getElementById("update-form").addEventListener('click', async function(e) {
         showLoadingOverlay();
@@ -104,26 +96,26 @@ document.addEventListener('DOMContentLoaded', async function() {
             data[name_field] = value_field;
         });
 
-        data["gender_male"] = document.getElementById("gender-male").classList.contains('active') ? true : false;
-        data["gender_female"] = document.getElementById("gender-female").classList.contains('active') ? true : false;
-        data["resident_visa"] = document.getElementById("resident-visa").classList.contains('active') ? true : false;
-        data["resident_card"] = document.getElementById("resident-card").classList.contains('active') ? true : false;
-        data["resident_permit"] = document.getElementById("resident-permit").classList.contains('active') ? true : false;
-        data["resident_permit_educational"] = document.getElementById("resident-permit-educational").classList.contains('active') ? true : false;
-        data["target_official"] = document.getElementById("target-official").classList.contains('active') ? true : false;
-        data["target_tourism"] = document.getElementById("target-tourism").classList.contains('active') ? true : false;
-        data["target_business"] = document.getElementById("target-business").classList.contains('active') ? true : false;
-        data["target_study"] = document.getElementById("target-study").classList.contains('active') ? true : false;
-        data["target_work"] = document.getElementById("target-work").classList.contains('active') ? true : false;
-        data["target_private"] = document.getElementById("target-private").classList.contains('active') ? true : false;
-        data["target_transit"] = document.getElementById("target-transit").classList.contains('active') ? true : false;
-        data["target_humanitarian"] = document.getElementById("target-humanitarian").classList.contains('active') ? true : false;
-        data["target_other"] = document.getElementById("target-other").classList.contains('active') ? true : false;
-        data["room_living"] = document.getElementById("room-living").classList.contains('active') ? true : false;
-        data["room_other"] = document.getElementById("room-other").classList.contains('active') ? true : false;
-        data["room_organization"] = document.getElementById("room-organization").classList.contains('active') ? true : false;
-        data["person_organization"] = document.getElementById("person-organization").classList.contains('active') ? true : false;
-        data["person_individual"] = document.getElementById("person-individual").classList.contains('active') ? true : false;
+        data["gender_male"] = document.getElementById("gender-male").classList.contains('filled') ? true : false;
+        data["gender_female"] = document.getElementById("gender-female").classList.contains('filled') ? true : false;
+        data["resident_visa"] = document.getElementById("resident-visa").classList.contains('filled') ? true : false;
+        data["resident_card"] = document.getElementById("resident-card").classList.contains('filled') ? true : false;
+        data["resident_permit"] = document.getElementById("resident-permit").classList.contains('filled') ? true : false;
+        data["resident_permit_educational"] = document.getElementById("resident-permit-educational").classList.contains('filled') ? true : false;
+        data["target_official"] = document.getElementById("target-official").classList.contains('filled') ? true : false;
+        data["target_tourism"] = document.getElementById("target-tourism").classList.contains('filled') ? true : false;
+        data["target_business"] = document.getElementById("target-business").classList.contains('filled') ? true : false;
+        data["target_study"] = document.getElementById("target-study").classList.contains('filled') ? true : false;
+        data["target_work"] = document.getElementById("target-work").classList.contains('filled') ? true : false;
+        data["target_private"] = document.getElementById("target-private").classList.contains('filled') ? true : false;
+        data["target_transit"] = document.getElementById("target-transit").classList.contains('filled') ? true : false;
+        data["target_humanitarian"] = document.getElementById("target-humanitarian").classList.contains('filled') ? true : false;
+        data["target_other"] = document.getElementById("target-other").classList.contains('filled') ? true : false;
+        data["room_living"] = document.getElementById("room-living").classList.contains('filled') ? true : false;
+        data["room_other"] = document.getElementById("room-other").classList.contains('filled') ? true : false;
+        data["room_organization"] = document.getElementById("room-organization").classList.contains('filled') ? true : false;
+        data["person_organization"] = document.getElementById("person-organization").classList.contains('filled') ? true : false;
+        data["person_individual"] = document.getElementById("person-individual").classList.contains('filled') ? true : false;
 
         try {
             const response = await apiRequest(url=`/api/v1/forms/${documentId}`, options={
@@ -140,7 +132,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             hideLoadingOverlay();
 
             if (answer.file_name) {
-                window.open(`/static/src/documents/pdf/${answer.file_name}.pdf`, '_blank');
+                window.location.href = '/documents';
             } else {
                 throw new Error('Имя файла не получено от сервера');
             }

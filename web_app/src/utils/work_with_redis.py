@@ -74,8 +74,7 @@ class RedisService:
         set_key = f"{self.user_set_prefix}{user_id}"
 
         async with self.redis.pipeline(transaction=True) as pipe:
-            pipe.delete(old_token_key)
-            pipe.srem(set_key, last_token)
+            pipe.expire(old_token_key, 30)
             pipe.set(
                 name=new_token_key,
                 value=data,
