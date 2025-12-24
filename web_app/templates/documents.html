@@ -10,14 +10,6 @@
 <body>
     {% include 'header.html' %}
     <div class="documents-container">
-        <div class="control-panel">
-            <div class="control-left">
-                <button class="btn btn-primary" onclick="location.href='/document/create'">
-                    <span>+</span> Создать документ
-                </button>
-            </div>
-        </div>
-
         <div class="documents-table-container">
             <table class="documents-table">
                 <thead>
@@ -47,7 +39,6 @@
         </div>
     </div>
 
-    <!-- Модальное окно подтверждения -->
     <div id="confirmModal" class="modal">
         <div class="modal-content">
             <h3>Подтверждение действия</h3>

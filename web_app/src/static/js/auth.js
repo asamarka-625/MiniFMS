@@ -36,7 +36,6 @@ async function apiRequest(url, options = {}) {
 
     if (response.status === 401) {
         await silentRefresh();
-        // Обновляем оба токена в заголовках
         headers['Authorization'] = `Bearer ${accessToken}`;
         headers['X-CSRF-Token'] = csrfToken;
         response = await fetch(url, { ...options, headers });
@@ -64,7 +63,6 @@ async function logoutRequest() {
     }
 }
 
-// Загрузка данных пользователя
 async function loadUserData() {
     try {
         const response = await apiRequest(url='/api/v1/user/me', options={

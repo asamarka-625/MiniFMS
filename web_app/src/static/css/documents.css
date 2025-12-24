@@ -20,7 +20,6 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Панель управления */
 .control-panel {
     display: flex;
     justify-content: space-between;
@@ -108,7 +107,6 @@ body {
     min-width: 150px;
 }
 
-/* Таблица документов */
 .documents-table-container {
     overflow-x: auto;
     margin-bottom: 20px;
@@ -156,7 +154,6 @@ body {
     background-color: #e9ecef;
 }
 
-/* Статусы документов */
 .status {
     padding: 4px 8px;
     border-radius: 3px;
@@ -187,7 +184,6 @@ body {
     color: white;
 }
 
-/* Кнопки действий */
 .actions {
     display: flex;
     gap: 8px;
@@ -234,7 +230,6 @@ body {
     background: #c82333;
 }
 
-/* Пагинация */
 .pagination {
     display: flex;
     justify-content: center;
@@ -267,7 +262,6 @@ body {
     color: #333;
 }
 
-/* Информационная панель */
 .info-panel {
     display: flex;
     justify-content: space-around;
@@ -295,7 +289,6 @@ body {
     color: #0a5c36;
 }
 
-/* Футер */
 .footer {
     margin-top: 30px;
     padding-top: 15px;
@@ -315,7 +308,6 @@ body {
     font-style: italic;
 }
 
-/* Модальное окно */
 .modal {
     display: none;
     position: fixed;
@@ -366,7 +358,6 @@ body {
     background: #c82333;
 }
 
-/* Адаптивность */
 @media (max-width: 1200px) {
     .documents-container {
         padding: 15px;

@@ -7,7 +7,6 @@ function getDocumentId() {
 
 const documentId = getDocumentId();
 
-// Загрузка данных документа
 async function loadDocumentData() {
     try {
         const response = await apiRequest(url=`/api/v1/forms/${documentId}`, options={
@@ -33,7 +32,7 @@ function fillFormWithData(data) {
             if (element) {
                 let stringValue = String(value || '').trim().replaceAll('~', '');
 
-                if (element.tagName === 'INPUT') {
+                if (inputConfigurations.contains(elementId)) {
                     element.value = stringValue;
                     if (stringValue && stringValue.length > 0) element.classList.add("filled");
 
@@ -41,21 +40,21 @@ function fillFormWithData(data) {
                     if (element.classList.contains('checkbox')) {
                         if (Boolean(value)) {
                             element.classList.add("filled");
-                            element.textContent = '✓';
+                            element.value = '✓';
                         }
 
                     } else {
-                        const spans = element.getElementsByTagName('span');
+                        const spans = element.getElementsByTagName('input');
 
                         if (spans.length > 0) {
                             const chars = stringValue.split('');
 
                             for (let i = 0; i < spans.length && i < chars.length; i++) {
-                                spans[i].textContent = chars[i] || '';
+                                spans[i].value = chars[i] || '';
                                 if (chars[i] && chars[i].length > 0) spans[i].classList.add("filled");
                             }
                         } else {
-                            element.textContent = value;
+                            element.value = value;
                         }
                     }
                 }
@@ -80,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             if (parent) {
                 const children = parent.children;
                 Array.from(children).forEach(child => {
-                    value_field += child.textContent;
+                    value_field += child.value;
                 });
             }
             data[name_field] = value_field;

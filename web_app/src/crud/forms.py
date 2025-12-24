@@ -30,9 +30,9 @@ async def create_form(
 
     if created_form:
         created_form["id"] = str(created_form.pop("_id"))
+        return convert_bson_types(created_form)
 
-    return convert_bson_types(created_form)
-
+    return {}
 
 # Получаем форму по ID
 async def get_form_by_id(form_id: str) -> Optional[Dict[str, Any]]:
@@ -43,8 +43,7 @@ async def get_form_by_id(form_id: str) -> Optional[Dict[str, Any]]:
 
         if form:
             form["id"] = str(form.pop("_id"))
-
-        return convert_bson_types(form)
+            return convert_bson_types(form)
 
     except:
         return None

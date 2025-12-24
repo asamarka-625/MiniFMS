@@ -1,4 +1,3 @@
-// Текущая активная ячейка
 let currentCell = null;
 let currentFieldName = "";
 let allCells = [];
@@ -19,7 +18,6 @@ function hideLoadingOverlay() {
   }
 }
 
-// Список полей, которые нужно создать
 const fieldConfigurations = [
     { id: 'surname-field', cellCount: 28, label: 'Фамилия' },
     { id: 'surname-latin-field', cellCount: 22, label: 'Фамилия (латинскими буквами)' },
@@ -186,7 +184,6 @@ const forLocalStorage = [
     "host-org-road"
 ];
 
-// Инициализация всех полей с ячейками
 function initializeFields() {
     allCells = [];
 
@@ -194,12 +191,13 @@ function initializeFields() {
         const field = document.getElementById(config.id);
         if (!field) return;
 
-        // Очищаем поле
         field.innerHTML = '';
 
-        // Создаем ячейки
         for (let i = 0; i < config.cellCount; i++) {
-            const cell = document.createElement('span');
+            const cell = document.createElement('input');
+            cell.type = 'text';
+            cell.inputmode = 'text';
+            cell.maxLength = 1;
             cell.className = 'checkbox';
             cell.dataset.fieldId = config.id;
             cell.dataset.cellIndex = i;
@@ -211,16 +209,13 @@ function initializeFields() {
                     cell.classList.add('filled');
                 }
             }
-            cell.textContent = content;
-            cell.tabIndex = -1; // Делаем фокусируемыми
+            cell.value = content;
+            cell.tabIndex = -1;
 
-            // Обработчик клика на ячейку
             cell.addEventListener('click', function(e) {
                 e.stopPropagation();
                 setActiveCell(this);
             });
-
-            // Обработчик фокуса
 
             cell.addEventListener('focus', function() {
                 setActiveCell(this);
@@ -244,55 +239,41 @@ function initializeFields() {
         });
     });
 
-    // Делаем первую ячейку фокусируемой
     if (allCells.length > 0) {
         allCells[0].tabIndex = 0;
     }
 }
 
-// Установка активной ячейки
 function setActiveCell(cell) {
-    // Снимаем выделение с предыдущей активной ячейки
     if (currentCell) {
         currentCell.classList.remove('active');
         currentCell.tabIndex = -1;
     }
 
-    // Устанавливаем новую активную ячейку
     currentCell = cell;
     currentCell.classList.add('active');
     currentCell.tabIndex = 0;
     currentCell.focus();
 
-    // Получаем информацию о поле
     currentFieldName = cell.dataset.fieldLabel || 'Неизвестное поле';
     const fieldId = cell.dataset.fieldId;
     const fieldConfig = fieldConfigurations.find(f => f.id === fieldId);
 
-    // Обновляем информацию об активной ячейке
-    document.getElementById('current-field-name').textContent = currentFieldName;
-    document.getElementById('current-cell-index').textContent = `Ячейка ${parseInt(cell.dataset.cellIndex) + 1} из ${fieldConfig ? fieldConfig.cellCount : '?'}`;
-    document.getElementById('current-cell-value').textContent = `Значение: "${cell.textContent}"`;
-
-    // Обновляем стиль заполненной ячейки
     updateCellStyle(cell);
 }
 
-// Обновление стиля ячейки в зависимости от содержимого
 function updateCellStyle(cell) {
-    if (cell.textContent.trim() !== '') {
+    if (cell.value.trim() !== '') {
         cell.classList.add('filled');
     } else {
         cell.classList.remove('filled');
     }
 }
 
-// Получение индекса текущей ячейки в массиве всех ячеек
 function getCurrentCellIndex() {
     return allCells.indexOf(currentCell);
 }
 
-// Переход к следующей ячейке
 function goToNextCell() {
     if (!currentCell) return;
 
@@ -302,7 +283,6 @@ function goToNextCell() {
     }
 }
 
-// Переход к предыдущей ячейке
 function goToPreviousCell() {
     if (!currentCell) return;
 
@@ -312,98 +292,80 @@ function goToPreviousCell() {
     }
 }
 
-// Обработка ввода с клавиатуры
 function handleKeyInput(key) {
     if (!currentCell) return;
 
-    // Если это буква, цифра или специальный символ
     if (key.length === 1) {
         const key_upper = key.toUpperCase();
-        currentCell.textContent = key_upper;
+        currentCell.value = key_upper;
         updateCellStyle(currentCell);
-        document.getElementById('current-cell-value').textContent = `Значение: "${key_upper}"`;
         if (forLocalStorage.includes(currentCell.dataset.fieldId)) {
             localStorage.setItem(`${currentCell.dataset.fieldId}-${currentCell.dataset.cellIndex}`, key_upper);
         }
-        // Автоматически переходим к следующей ячейке
         goToNextCell();
     }
 }
 
-// Обработка удаления с переходом к предыдущей ячейке
 function handleBackspace() {
     if (!currentCell) return;
 
-    // Запоминаем текущую ячейку
     const currentIndex = getCurrentCellIndex();
 
-    // Если в текущей ячейке есть символ, удаляем его
-    if (currentCell.textContent !== '') {
-        currentCell.textContent = '';
+    if (currentCell.value !== '') {
+        currentCell.value = '';
         updateCellStyle(currentCell);
-        document.getElementById('current-cell-value').textContent = 'Значение: ""';
     }
-    // Если ячейка пустая, переходим к предыдущей
+
     else if (currentIndex > 0) {
         goToPreviousCell();
 
-        // Удаляем символ в предыдущей ячейке
-        if (currentCell.textContent !== '') {
-            currentCell.textContent = '';
+        if (currentCell.value !== '') {
+            currentCell.value = '';
             updateCellStyle(currentCell);
-            document.getElementById('current-cell-value').textContent = 'Значение: ""';
         }
     }
 }
 
-// Обработка удаления без перехода (Delete)
+
 function handleDelete() {
     if (!currentCell) return;
 
-    if (currentCell.textContent !== '') {
-        currentCell.textContent = '';
+    if (currentCell.value !== '') {
+        currentCell.value = '';
         updateCellStyle(currentCell);
-        document.getElementById('current-cell-value').textContent = 'Значение: ""';
     }
 }
 
-// Инициализация радио-кнопок и чекбоксов
 function initializeOptionButtons() {
-    // Радио-кнопки для пола
     const genderButtons = document.querySelectorAll('.checkbox.radio');
     genderButtons.forEach(button => {
         button.addEventListener('click', function() {
             const field = this.dataset.field;
             const value = this.dataset.value;
 
-            // Снимаем выделение со всех кнопок этой группы
             document.querySelectorAll(`.checkbox.radio[data-field="${field}"]`).forEach(btn => {
-                btn.textContent = '';
+                btn.value = '';
                 btn.classList.remove('filled');
             });
 
-            // Выделяем текущую кнопку
             this.classList.add('filled');
-            this.textContent = '✓';
+            this.value = '✓';
         });
     });
 
-    // Чекбоксы для цели въезда
     const purposeOptions = document.querySelectorAll('.checkbox.option');
     purposeOptions.forEach(option => {
         option.addEventListener('click', function() {
             this.classList.toggle('active');
             this.classList.toggle('filled');
-            this.textContent = this.classList.contains('active') ? '✓' : '';
+            this.value = this.classList.contains('active') ? '✓' : '';
         });
     });
 }
 
-// Очистка формы
 function clearForm() {
-    // Очищаем все ячейки
     allCells.forEach(cell => {
-        cell.textContent = '';
+        cell.value = '';
         cell.classList.remove('active');
         cell.classList.remove('filled');
         cell.tabIndex = -1;
@@ -416,26 +378,19 @@ function clearForm() {
         input.classList.remove('filled');
     });
 
-    // Делаем первую ячейку фокусируемой
     if (allCells.length > 0) {
         allCells[0].tabIndex = 0;
     }
 
-    // Очищаем радио-кнопки и чекбоксы
     document.querySelectorAll('.checkbox.radio, .checkbox.option').forEach(btn => {
-        btn.textContent = '';
+        btn.value = '';
         btn.classList.remove('active');
         btn.classList.remove('filled');
     });
 
-    // Сбрасываем активную ячейку
     currentCell = null;
-    document.getElementById('current-field-name').textContent = 'Не выбрана';
-    document.getElementById('current-cell-index').textContent = '-';
-    document.getElementById('current-cell-value').textContent = 'Значение: -';
 }
 
-// Переход к первой ячейке
 function focusFirstCell() {
     if (allCells.length > 0) {
         setActiveCell(allCells[0]);
@@ -455,7 +410,7 @@ async function SubmitForm(e) {
         if (parent) {
             const children = parent.children;
             Array.from(children).forEach(child => {
-                value_field += child.textContent;
+                value_field += child.value;
             });
         }
         data[name_field] = value_field;
@@ -536,21 +491,17 @@ document.addEventListener('DOMContentLoaded', async function() {
         console.error('Ошибка при инициализации:', error);
     }
 
-    // Обработчики кнопок
     document.getElementById('clear-form').addEventListener('click', clearForm);
     document.getElementById('focus-first').addEventListener('click', focusFirstCell);
     document.getElementById('create-form').addEventListener('click', SubmitForm);
 
-    // Обработка физической клавиатуры
     document.addEventListener('keydown', function(e) {
-        // Получаем активный элемент
         const activeElement = document.activeElement;
 
         if (inputConfigurations.includes(activeElement.id)) {
             return;
         }
 
-        // Проверяем, что активный элемент - это ячейка формы
         if (!activeElement.classList.contains('checkbox') && currentCell) {
             currentCell.focus();
         }
@@ -597,7 +548,6 @@ document.addEventListener('DOMContentLoaded', async function() {
                 break;
 
             default:
-                // Обработка ввода символов (буквы, цифры, символы)
                 if (e.key.length === 1 && !e.ctrlKey && !e.altKey && !e.metaKey) {
                     e.preventDefault();
                     handleKeyInput(e.key);
@@ -606,7 +556,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
 
-    // Обработка клика вне ячеек
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.checkbox')) {
             if (!inputConfigurations.includes(e.target.id) && currentCell) {
@@ -615,6 +564,5 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
 
-    // Фокусируем первую ячейку при загрузке
     setTimeout(focusFirstCell, 100);
 });

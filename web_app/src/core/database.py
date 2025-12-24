@@ -60,6 +60,7 @@ class MongoDB:
     async def create_user_indexes(cls):
         """Создание индексов для коллекции users"""
         await cls.db.users.create_index("username", unique=True, name="username_unique")
+        await cls.db.users.create_index("email", unique=True, name="email_unique")
 
         cfg.logger.info("User indexes created")
 

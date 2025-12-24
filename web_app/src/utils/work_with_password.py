@@ -1,4 +1,5 @@
 # Внешние зависимости
+import secrets
 from passlib.context import CryptContext
 
 
@@ -20,3 +21,8 @@ def verify_password(plain_password, hashed_password):
 # Получаем хэш пароля
 def get_password_hash(password):
     return pwd_context.hash(password)
+
+
+# Генерируем токен для сброса пароля
+def create_reset_token():
+    return secrets.token_urlsafe(32)

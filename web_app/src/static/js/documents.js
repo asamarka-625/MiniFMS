@@ -10,17 +10,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 });
 
-// Конфигурация
 const API_BASE_URL = '/api/v1';
 const DOCUMENTS_PER_PAGE = 10;
 
-// Состояние приложения
 let currentPage = 1;
 let totalDocuments = 0;
 let documents = [];
 let documentToDelete = null;
 
-// Загрузка списка документов
 async function loadDocuments() {
     try {
         showLoading(true);
@@ -53,7 +50,6 @@ async function loadDocuments() {
     }
 }
 
-// Отображение документов в таблице
 function renderDocuments() {
     const tbody = document.getElementById('documentsList');
 
@@ -107,7 +103,6 @@ function renderDocuments() {
             }
         }
 
-        // Определяем URL для редактирования и PDF
         const editUrl = `/document/edit/${doc._id}`;
         const pdfUrl = `/static/documents/pdf/${doc.uuid}.pdf`;
 
@@ -143,7 +138,6 @@ function renderDocuments() {
     });
 }
 
-// Обновление пагинации
 function updatePagination() {
     const totalPages = Math.ceil(totalDocuments / DOCUMENTS_PER_PAGE);
 
@@ -157,7 +151,6 @@ function updatePagination() {
     nextBtn.disabled = currentPage === totalPages || totalPages === 0;
 }
 
-// Смена страницы
 function changePage(direction) {
     const newPage = currentPage + direction;
     const totalPages = Math.ceil(totalDocuments / DOCUMENTS_PER_PAGE);
@@ -168,7 +161,6 @@ function changePage(direction) {
     loadDocuments();
 }
 
-// Удаление документа
 async function deleteDocument(documentId) {
     try {
         const response = await apiRequest(url=`${API_BASE_URL}/forms/${documentId}`, options={
@@ -193,7 +185,6 @@ async function deleteDocument(documentId) {
     }
 }
 
-// Показать модальное окно подтверждения удаления
 function showDeleteModal(documentId) {
     documentToDelete = documentId;
 
@@ -208,7 +199,6 @@ function showDeleteModal(documentId) {
     }
 }
 
-// Закрыть модальное окно
 function closeModal() {
     documentToDelete = null;
 
@@ -218,7 +208,6 @@ function closeModal() {
     }
 }
 
-// Подтверждение удаления
 async function confirmAction() {
     if (!documentToDelete) {
         closeModal();
@@ -229,16 +218,12 @@ async function confirmAction() {
         const result = await deleteDocument(documentToDelete);
 
         if (result.success) {
-            // Успешное удаление
             alert('Документ успешно удален');
 
-            // Если на текущей странице остался только этот документ и это не первая страница,
-            // переходим на предыдущую страницу
             if (documents.length === 1 && currentPage > 1) {
                 currentPage--;
             }
 
-            // Перезагружаем список документов
             loadDocuments();
         } else {
             alert(`Ошибка удаления: ${result.error}`);
@@ -251,7 +236,6 @@ async function confirmAction() {
     }
 }
 
-// Показать/скрыть индикатор загрузки
 function showLoading(isLoading) {
     const tbody = document.getElementById('documentsList');
     if (!tbody) return;
@@ -267,7 +251,6 @@ function showLoading(isLoading) {
             </tr>
         `;
 
-        // Блокируем кнопки пагинации во время загрузки
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         if (prevBtn) prevBtn.disabled = true;
@@ -275,7 +258,6 @@ function showLoading(isLoading) {
     }
 }
 
-// Показать сообщение об ошибке
 function showError(message) {
     const tbody = document.getElementById('documentsList');
     if (!tbody) return;
@@ -292,9 +274,7 @@ function showError(message) {
     `;
 }
 
-// Настройка обработчиков событий
 function setupEventListeners() {
-    // Закрытие модального окна при клике вне его
     window.addEventListener('click', function(event) {
         const modal = document.getElementById('confirmModal');
         if (event.target === modal) {
@@ -302,7 +282,6 @@ function setupEventListeners() {
         }
     });
 
-    // Обработка нажатия Escape для закрытия модального окна
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             closeModal();
@@ -310,13 +289,11 @@ function setupEventListeners() {
     });
 }
 
-// Функция для обновления списка (можно вызвать извне)
 function refreshDocuments() {
     currentPage = 1;
     loadDocuments();
 }
 
-// Экспорт функций для глобального использования
 window.changePage = changePage;
 window.showDeleteModal = showDeleteModal;
 window.closeModal = closeModal;

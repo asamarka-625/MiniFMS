@@ -1,5 +1,6 @@
 # Внешние зависимости
-from typing import Optional, Dict
+import asyncio
+from typing import Optional, Dict, Any
 import json
 from datetime import datetime, date
 import redis.asyncio as redis
@@ -21,6 +22,8 @@ class RedisService:
         self.refresh_prefix = "refresh:"
         self.user_set_prefix = "user_tokens:"
         self.user_prefix = "user:"
+        self.verification_prefix = "verification:"
+        self.reset_prefix = "reset_password:"
 
     async def init_redis(self):
         """Инициализация подключения к Redis"""
@@ -143,6 +146,186 @@ class RedisService:
             return json.loads(data)
 
         return None
+
+    async def delete_verification_data(self, email: str) -> bool:
+        """Удаление всех данных о верификации одним вызовом"""
+        try:
+            keys = [
+                f"{self.verification_prefix}code:{email}",
+                f"{self.verification_prefix}attempts:{email}",
+                f"{self.verification_prefix}data:{email}"
+            ]
+            result = await self.redis.delete(*keys)
+
+            return result > 0
+
+        except Exception as e:
+            cfg.logger.error(f"Ошибка удаления данных верификации: {e}")
+            return False
+
+    async def save_verification_code(
+            self,
+            email: str,
+            code: str,
+            user_data: Dict[str, Any]
+    ) -> bool:
+        """Сохранение кода подтверждения и данных пользователя"""
+        try:
+            data_json = json.dumps(user_data)
+
+            code_key = f"{self.verification_prefix}code:{email}"
+            attempts_key = f"{self.verification_prefix}attempts:{email}"
+            data_key = f"{self.verification_prefix}data:{email}"
+
+            async with self.redis.pipeline(transaction=True) as pipe:
+                pipe.setex(code_key, cfg.VERIFICATION_CODE_TTL, code)
+                pipe.setex(attempts_key, cfg.VERIFICATION_CODE_TTL, "0")
+                pipe.setex(data_key, cfg.VERIFICATION_CODE_TTL, data_json)
+
+                await pipe.execute()
+                return True
+
+        except Exception as e:
+            cfg.logger.error(f"Ошибка сохранения кода подтверждения: {e}")
+            return False
+
+    async def get_registration_data(
+        self,
+        email: str
+    ) -> Optional[Dict[str, str]]:
+        """Получаем данные о пользователе"""
+        data = await self.redis.get(f"{self.verification_prefix}data:{email}")
+        if data:
+            return json.loads(data)
+
+        return None
+
+    async def verify_code(
+        self,
+        email: str,
+        code: str
+    ) -> tuple[bool, Optional[Dict[str, Any]], str]:
+        """Проверка кода"""
+        code_key = f"{self.verification_prefix}code:{email}"
+        attempts_key = f"{self.verification_prefix}attempts:{email}"
+        data_key = f"{self.verification_prefix}data:{email}"
+
+        max_retries = 3
+        retry_count = 0
+
+        while retry_count < max_retries:
+            try:
+                async with self.redis.pipeline(transaction=True) as pipe:
+                    try:
+                        # Следим за ключами перед чтением
+                        await pipe.watch(code_key, attempts_key, data_key)
+
+                        saved_code = await pipe.get(code_key)
+                        attempts_str = await pipe.get(attempts_key)
+                        user_data_json = await pipe.get(data_key)
+
+                        # Проверяем, что все данные существуют
+                        if not all([saved_code, attempts_str, user_data_json]):
+                            await pipe.unwatch()
+                            return False, None, "Code not found or expired"
+
+                        attempts = int(attempts_str)
+
+                        # Проверка лимита попыток
+                        if attempts >= 5:
+                            pipe.delete(code_key, attempts_key, data_key)
+                            await pipe.execute()
+                            return False, None, "The number of attempts has been exceeded. Request a new code."
+
+                        input_code = code.strip()
+
+                        # Начинаем формировать транзакцию
+                        pipe.multi()
+
+                        # Сравниваем коды
+                        if saved_code != input_code:
+                            attempts += 1
+                            pipe.setex(attempts_key, cfg.VERIFICATION_CODE_TTL, str(attempts))
+
+                            if attempts >= 5:
+                                pipe.delete(code_key, attempts_key, data_key)
+
+                            await pipe.execute()
+
+                            if attempts >= 5:
+                                return False, None, "The number of attempts has been exceeded. Request a new code."
+                            return False, None, f"Invalid code. Remaining attempts: {5 - attempts}"
+
+                        pipe.delete(code_key, attempts_key, data_key)
+                        await pipe.execute()
+
+                        # Парсим данные пользователя
+                        user_data = json.loads(user_data_json)
+                        return True, user_data, "Code verified"
+
+                    except redis.WatchError:
+                        # Ключи были изменены другим процессом, повторяем
+                        retry_count += 1
+                        cfg.logger.warning(f"WatchError при проверке кода для {email}, попытка {retry_count}")
+                        continue
+
+            except json.JSONDecodeError:
+                cfg.logger.error(f"Ошибка декодирования JSON для email: {email}")
+                await self.delete_verification_data(email)
+                return False, None, "Ошибка данных пользователя"
+
+            except Exception as e:
+                cfg.logger.error(f"Ошибка при проверке кода: {e}")
+                return False, None, "Ошибка сервера"
+
+        # Превышено количество попыток из-за конкурентности
+        cfg.logger.error(f"Превышено количество retry при проверке кода для {email}")
+        return False, None, "Too many simultaneous requests. Please try again."
+
+    async def resend_verification_code(
+        self,
+        email: str,
+        new_code: str
+    ) -> bool:
+        """Повторная отправка кода подтверждения"""
+        try:
+            code_key = f"{self.verification_prefix}code:{email}"
+            attempts_key = f"{self.verification_prefix}attempts:{email}"
+            data_key = f"{self.verification_prefix}data:{email}"
+
+            if not await self.redis.exists(data_key):
+                return False
+
+            async with self.redis.pipeline(transaction=True) as pipe:
+                pipe.setex(code_key, cfg.VERIFICATION_CODE_TTL, new_code)
+                pipe.setex(attempts_key, cfg.VERIFICATION_CODE_TTL, "0")
+                pipe.expire(data_key, cfg.VERIFICATION_CODE_TTL)
+
+                await pipe.execute()
+                return True
+
+        except Exception as e:
+            cfg.logger.error(f"Ошибка повторной отправки кода: {e}")
+            return False
+
+    async def add_reset_password_token(self, token: str, email: str):
+        """Сохранение токена для смены пароля пользователя в Redis"""
+        key = f"{self.reset_prefix}{token}"
+        await self.redis.setex(
+            key,
+            24 * 3600,
+            email
+        )
+
+    async def get_reset_password_token(self, token: str) -> Optional[int]:
+        """Получение токена для смены пароля пользователя в Redis"""
+        key = f"{self.reset_prefix}{token}"
+        return await self.redis.get(key)
+
+    async def del_reset_password_token(self, token: str) -> Optional[int]:
+        """Удаление токена для смены пароля пользователя в Redis"""
+        key = f"{self.reset_prefix}{token}"
+        await self.redis.delete(key)
 
     async def get_info(self) -> dict:
         """Информация redis"""

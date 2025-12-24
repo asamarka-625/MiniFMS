@@ -5,6 +5,12 @@
     font-family: 'Times New Roman', serif;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     background: #f5f5f5;
     padding: 20px;
@@ -12,12 +18,12 @@ body {
 }
 
 .form-container {
-    max-width: 1200px;
     margin: 0 auto;
     background: #f0ece6;
     padding: 25px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border: 1px solid #ccc;
+    overflow-y: auto;
 }
 
 .form-title {
@@ -29,6 +35,7 @@ body {
     text-transform: uppercase;
     padding-bottom: 10px;
     border-bottom: 1px solid #333;
+    margin-top: 2rem;
 }
 
 .section-title {
@@ -148,33 +155,21 @@ body {
     margin-top: 20px;
     padding-top: 15px;
     border-top: 1px solid #ccc;
+    gap: 1rem;
 }
 
 .btn {
-    padding: 8px 20px;
+    padding: 0.5rem;
     background-color: #128a53;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 3px;
 }
 
 .btn:hover {
     background-color: #0a5c36;
-}
-
-.current-cell-info {
-    position: fixed;
-    top: 120px;
-    right: 20px;
-    background-color: #b3ecb1;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    max-width: 300px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .instructions {

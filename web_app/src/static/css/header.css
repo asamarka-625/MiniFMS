@@ -44,13 +44,13 @@ h1 {
 
 .user-info {
     text-align: right;
+    display: flex;
+    gap: 0.5rem;
 }
 
 .username {
     display: block;
     font-weight: bold;
-    font-size: 14px;
-    color: #333;
 }
 
 .logout-btn {
@@ -147,10 +147,6 @@ h1 {
     .tab-link {
         min-width: 200px;
         justify-content: flex-start;
-    }
-
-    .tab-text {
-        display: none;
     }
 
     .tab-link {

@@ -1,10 +1,12 @@
 # Внешние зависимости
-from typing import Dict
-from fastapi import APIRouter, Request, Depends
+from typing import Dict, Annotated
+from fastapi import APIRouter, Request, Depends, status, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from pydantic import Field
 # Внутренние модули
 from web_app.src.dependencies import get_data_by_refresh_token
+from web_app.src.utils import redis_service
 
 
 router = APIRouter()
@@ -76,3 +78,34 @@ async def edit_document(
     }
 
     return templates.TemplateResponse('form.html', context=context)
+
+
+# Страница для восстановления пароля
+@router.get("/forgot-password", response_class=HTMLResponse)
+async def forgot_password(
+        request: Request
+):
+    context = {
+        "request": request
+    }
+    return templates.TemplateResponse('forgot-password.html', context=context)
+
+
+# Смена пароля
+@router.get("/reset-password", response_class=HTMLResponse)
+async def reset_password(
+    request: Request,
+    token: Annotated[str, Field(strict=True)]
+):
+    # Проверяем токен
+    email = await redis_service.get_reset_password_token(token)
+    if email is None:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid or expired token"
+        )
+
+    context = {
+        "request": request
+    }
+    return templates.TemplateResponse('reset-password-confirm.html', context=context)

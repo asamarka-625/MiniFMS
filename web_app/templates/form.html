@@ -36,20 +36,16 @@
             <p class="loading-subtext">Пожалуйста, подождите</p>
         </div>
     </div>
+    <div class="form-container">
     {% include 'form-1.html' %}
     {% include 'form-2.html' %}
     {% include 'form-3.html' %}
+    </div>
     <div class="form-controls">
         <button class="btn btn-clear" id="clear-form">⭕ Очистить форму</button>
         <button class="btn btn-create" id="create-form">➕️ Создать файл</button>
         <button class="btn btn-create" id="update-form" style="display: none;">♻️ Обновить файл</button>
         <button class="btn" id="focus-first">⤴️ Перейти к первой ячейке</button>
-    </div>
-    <div class="current-cell-info" id="current-cell-info">
-        <strong>Активная ячейка:</strong><br>
-        <span id="current-field-name">Не выбрана</span><br>
-        <span id="current-cell-index">-</span><br>
-        <span id="current-cell-value">Значение: -</span>
     </div>
     <script src="/static/js/auth.js"></script>
     <script src="/static/js/form.js"></script>
